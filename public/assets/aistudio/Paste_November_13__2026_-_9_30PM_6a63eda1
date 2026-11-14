@@ -1,0 +1,1646 @@
+# ULTIMATE MASTER DEVELOPMENT PROMPT
+# SPACE MISSION DESIGN GAME
+## COMPLETE AAA-STYLE 3D MULTIPLAYER PLANETARY EXPLORATION & SURVIVAL GAME
+### FULL IMPLEMENTATION: UI/UX + 3D + GAMEPLAY + NASA DATA + PHYSICS + MULTIPLAYER + BACKEND
+
+You are the lead game director, senior game designer, UI/UX designer, 3D technical artist, gameplay programmer, physics engineer, NASA data integration engineer, multiplayer engineer and software architect.
+
+Your responsibility is to transform the EXISTING SPACE MISSION DESIGN GAME into a complete, polished, playable, realistic 3D multiplayer planetary exploration and survival game.
+
+The gameplay experience should have the smoothness, responsiveness, third-person perspective, squad organization, matchmaking, interface quality and competitive excitement associated with modern mobile multiplayer games such as Free Fire.
+
+However:
+
+- Do not copy Free Fire assets, maps, characters, branding, UI artwork or copyrighted content.
+- Do not introduce fictional space technology as real.
+- Do not invent NASA observations or scientific findings.
+- Do not violate known physical laws.
+- Do not use arbitrary gravity, movement, spacecraft or environmental behavior.
+- Do not sacrifice scientific accuracy for visual effects.
+- Do not turn this into a conventional fictional shooting game.
+
+The game must be based on REAL PLANETARY EXPLORATION, SCIENTIFIC OBJECTIVES, SPACE ENGINEERING, SURVIVAL, TEAMWORK AND COMPETITION.
+
+The final result must feel like a professional, modern 3D multiplayer game, not an educational website with a 3D model.
+
+==================================================
+PART 1 — NON-NEGOTIABLE EXISTING PROJECT PRESERVATION
+==================================================
+
+This is an extension of the existing project.
+
+Before making changes:
+
+1. Inspect the complete repository.
+2. Identify all existing frontend and backend modules.
+3. Identify all existing 3D scenes and gameplay components.
+4. Identify existing Zustand stores.
+5. Identify existing NASA APIs and data integrations.
+6. Identify existing multiplayer infrastructure.
+7. Identify existing mission engineering systems.
+8. Identify all existing dependencies.
+9. Identify incomplete and duplicate modules.
+10. Prepare an implementation map.
+
+Preserve all previously implemented systems, including:
+
+- React.
+- Vite.
+- TypeScript.
+- Tailwind CSS.
+- Three.js.
+- React Three Fiber.
+- Express.
+- Socket.IO.
+- Zustand.
+- Existing missionStore.
+- Existing campaignStore.
+- Existing NASA Horizons integration.
+- Existing OrbitPlanner.
+- Existing MissionSimulation.
+- Existing EngineeringConsole.
+- Existing mission engineering calculations.
+- Existing NASA Data Intelligence Engine.
+- Existing CML assessment.
+- Existing BioNutrients-2 scenario.
+- Existing mission architecture.
+- Existing scientific reference library.
+
+Do not create another project.
+
+Do not replace working modules.
+
+Do not overwrite existing APIs.
+
+Do not delete previous features to make implementation easier.
+
+Extend existing modules and maintain compatibility with existing saved data.
+
+If a module already exists, integrate it instead of creating a duplicate.
+
+==================================================
+PART 2 — GAME IDENTITY AND DESIGN DIRECTION
+==================================================
+
+Official game identity:
+
+SPACE MISSION DESIGN GAME
+
+Genre:
+
+- Third-person 3D multiplayer.
+- Planetary exploration.
+- Scientific survival.
+- Cooperative mission simulation.
+- Competitive objective-based gameplay.
+- Space engineering simulation.
+
+Visual direction:
+
+A premium realistic space exploration game with:
+
+- High-quality astronauts.
+- Realistic planetary terrain.
+- Detailed spacecraft.
+- Professional mission HUD.
+- Realistic lighting.
+- Cinematic environments.
+- Smooth animations.
+- Responsive controls.
+- Polished menus.
+- Atmospheric audio.
+
+Gameplay inspiration:
+
+Use modern multiplayer games as inspiration for responsiveness, interface clarity, matchmaking, player feedback and squad coordination.
+
+Do not reproduce another game's visual identity.
+
+Core gameplay loop:
+
+DESIGN MISSION
+→ PREPARE CREW
+→ DEPLOY
+→ EXPLORE
+→ COLLECT DATA
+→ COMPLETE OBJECTIVES
+→ SURVIVE
+→ RETURN OR EXTRACT
+→ ANALYZE RESULTS
+→ RECEIVE SCORE
+→ PROGRESS.
+
+==================================================
+PART 3 — COMPLETE UI/UX DESIGN SYSTEM
+==================================================
+
+Build a complete visual design system before implementing individual screens.
+
+## 3.1 Visual identity
+
+Create an original space-agency-inspired visual language.
+
+Use:
+
+- Deep-space backgrounds.
+- Dark graphite panels.
+- Subtle blue and cyan accents.
+- White and light-grey text.
+- Clear status colors.
+- High-contrast controls.
+- Fine technical grid details.
+- Restrained glow effects.
+- Professional data visualization.
+
+Avoid:
+
+- Excessive neon.
+- Excessive glassmorphism.
+- Cluttered panels.
+- Tiny unreadable text.
+- Random decorative elements.
+- Unnecessary animations.
+- Generic AI-generated dashboard layouts.
+
+The interface must look like a professionally designed game.
+
+## 3.2 Typography
+
+Create a consistent typography system:
+
+- Large display typography for game titles.
+- Medium headings for navigation.
+- Highly readable body typography.
+- Tabular numerals for telemetry.
+- Clear warning typography.
+- Consistent font sizes.
+
+Support scaling and accessibility.
+
+## 3.3 UI component library
+
+Build reusable components:
+
+- PrimaryButton.
+- SecondaryButton.
+- IconButton.
+- GameCard.
+- MissionCard.
+- PlayerCard.
+- SquadCard.
+- ProgressBar.
+- StatusIndicator.
+- TelemetryPanel.
+- Modal.
+- Tooltip.
+- ConfirmationDialog.
+- NotificationToast.
+- LoadingScreen.
+- EquipmentSlot.
+- InventoryGrid.
+- ObjectiveCard.
+- MapLegend.
+- DataSourceBadge.
+- ScientificResultCard.
+
+All components must have working states.
+
+## 3.4 Interface responsiveness
+
+Support:
+
+- Desktop.
+- Laptop.
+- Tablet.
+- Mobile landscape.
+- Mobile portrait for menus and supported gameplay layouts.
+
+Do not simply shrink the desktop interface.
+
+Design mobile and desktop interaction layouts appropriately.
+
+==================================================
+PART 4 — COMPLETE GAME NAVIGATION AND MENUS
+==================================================
+
+Implement all screens and connect their navigation.
+
+## 4.1 Startup screen
+
+Create:
+
+- Game logo.
+- Cinematic planetary background.
+- Loading progress.
+- Asset loading status.
+- Data initialization status.
+- Connection status.
+- Version information.
+
+## 4.2 Main menu
+
+Create a premium main menu with:
+
+- Play.
+- Career.
+- Multiplayer.
+- Solo Exploration.
+- Training.
+- Mission Design.
+- Scientific Challenges.
+- Planetary Map.
+- Research Library.
+- Profile.
+- Settings.
+- Credits.
+
+The main menu should feature a live 3D astronaut or planetary environment in the background.
+
+## 4.3 Player profile
+
+Include:
+
+- Username.
+- Avatar.
+- Astronaut model.
+- Career level.
+- Mission history.
+- Scientific achievements.
+- Exploration statistics.
+- Total successful missions.
+- Crew performance.
+- Reputation.
+- Unlocked cosmetics.
+
+Do not give paid gameplay advantages.
+
+## 4.4 Character selection
+
+Create a 3D character preview environment.
+
+Allow:
+
+- Astronaut selection.
+- Suit selection.
+- Helmet selection.
+- Backpack selection.
+- Gloves.
+- Boots.
+- Equipment customization.
+- Color customization where appropriate.
+
+Cosmetics must not change scientific performance or physical abilities.
+
+## 4.5 Game mode selection
+
+Create separate cards for:
+
+1. Planetary Survival.
+2. Squad Expedition.
+3. Scientific Competition.
+4. Emergency Operations.
+5. Free Exploration.
+6. Career Missions.
+7. Mission Engineering.
+8. Training Simulator.
+
+Each card must have a working description, selection state and launch flow.
+
+## 4.6 Matchmaking screen
+
+Include:
+
+- Selected game mode.
+- Selected planetary location.
+- Squad members.
+- Player count.
+- Connection quality.
+- Matchmaking status.
+- Cancel matchmaking.
+- Ready state.
+- Loading progress.
+
+## 4.7 Squad lobby
+
+Include:
+
+- Squad leader.
+- Crew members.
+- Character previews.
+- Crew roles.
+- Equipment selection.
+- Mission briefing.
+- Mission objective.
+- Ready/unready controls.
+- Squad communication.
+- Launch button.
+
+The player who creates the squad is its leader.
+
+==================================================
+PART 5 — COMPLETE 3D GAME WORLD
+==================================================
+
+This is a primary requirement.
+
+Do not build a simple static planet with astronauts standing on it.
+
+Create playable 3D environments with real terrain geometry, collision, navigation, lighting, environmental effects and interactive objects.
+
+## 5.1 Planetary environments
+
+Create playable locations using verified NASA data.
+
+Potential environments:
+
+A. Mars.
+B. Moon.
+C. Earth orbital environment.
+D. Space station.
+E. Spacecraft interior.
+F. EVA environment.
+
+Prioritize Mars and Moon for planetary exploration.
+
+## 5.2 Mars terrain
+
+Use verified datasets where available:
+
+- HiRISE imagery.
+- HiRISE Digital Terrain Models.
+- CTX imagery and elevation products where available.
+- MOLA elevation data.
+- Other relevant official Mars datasets.
+
+Terrain features:
+
+- Craters.
+- Slopes.
+- Ridges.
+- Valleys.
+- Rock formations.
+- Landing zones.
+- Scientific observation sites.
+- Rover routes.
+
+Use actual terrain elevation data to construct playable terrain meshes.
+
+Do not treat orbital imagery as elevation data.
+
+Do not invent measured elevation values.
+
+Where high-resolution elevation data is missing, use a clearly identified lower-resolution dataset or a labeled simulated terrain approximation.
+
+## 5.3 Moon terrain
+
+Use:
+
+- LOLA elevation data.
+- SLDEM products where applicable.
+- Verified lunar imagery and terrain products.
+
+Implement:
+
+- Craters.
+- Slopes.
+- Ridges.
+- Regolith surface representation.
+- Landing zones.
+- Scientific exploration zones.
+- Rover routes.
+
+## 5.4 Terrain generation pipeline
+
+Implement:
+
+- Dataset ingestion.
+- Coordinate transformation.
+- Tile management.
+- Elevation decoding.
+- Terrain mesh generation.
+- Texture mapping.
+- Normal generation.
+- Collision generation.
+- Level-of-detail.
+- Terrain streaming.
+- Caching.
+- Geographic positioning.
+
+Maintain correct:
+
+- Coordinate reference systems.
+- Elevation units.
+- Vertical scaling.
+- Geographic bounds.
+- Dataset resolution.
+
+Do not arbitrarily exaggerate planetary terrain without clearly labeling the visualization as exaggerated.
+
+## 5.5 Terrain navigation
+
+Implement:
+
+- Terrain-aware path planning.
+- Slope detection.
+- Hazard detection.
+- Rover route planning.
+- Landing site evaluation.
+- Scientific target navigation.
+
+Use real terrain data for navigation where available.
+
+==================================================
+PART 6 — 3D ASTRONAUT CHARACTER SYSTEM
+==================================================
+
+Create a complete third-person character system.
+
+## 6.1 Character model
+
+Requirements:
+
+- High-quality astronaut model.
+- Realistic spacesuit.
+- Helmet.
+- Backpack.
+- Life-support equipment.
+- Gloves.
+- Boots.
+- Equipment attachments.
+- Realistic proportions.
+
+Use original assets or appropriately licensed assets.
+
+## 6.2 Character rigging
+
+Implement:
+
+- Full-body skeleton.
+- Inverse kinematics where appropriate.
+- Foot placement.
+- Hand interaction.
+- Equipment attachment points.
+- Animation blending.
+- Network-compatible animation states.
+
+## 6.3 Animations
+
+Create:
+
+- Idle.
+- Walking.
+- Running.
+- Sprinting.
+- Jumping.
+- Falling.
+- Landing.
+- Crouching.
+- Turning.
+- Scanning.
+- Sample collection.
+- Equipment handling.
+- Repair.
+- Climbing.
+- Entering vehicles.
+- Exiting vehicles.
+- Boarding spacecraft.
+- EVA movement.
+- Low-gravity locomotion.
+- Zero-gravity translation.
+
+Animations must not imply impossible physical motion.
+
+Use appropriate gravity and movement states for each environment.
+
+## 6.4 Character camera
+
+Implement:
+
+- Smooth third-person follow camera.
+- Shoulder camera.
+- Camera collision.
+- Camera sensitivity.
+- Camera zoom.
+- First-person helmet view.
+- Camera mode switching.
+- Interaction camera transitions.
+
+The camera must never clip excessively through terrain or spacecraft geometry.
+
+==================================================
+PART 7 — FULL MANUAL CONTROL SYSTEM
+==================================================
+
+## 7.1 Desktop controls
+
+- W/A/S/D: Movement.
+- Shift: Sprint.
+- Space: Jump where physically appropriate.
+- C: Crouch.
+- E: Interact.
+- F: Flashlight.
+- Mouse: Camera rotation.
+- Left click: Primary tool action.
+- Right click: Tool aiming or scanning.
+- Tab: Inventory.
+- M: Map.
+- I: Mission information.
+- V: Camera mode.
+- Escape: Pause.
+
+Create a customizable key-binding system.
+
+## 7.2 Mobile controls
+
+Create polished touch controls:
+
+- Virtual joystick.
+- Camera rotation region.
+- Sprint.
+- Jump where appropriate.
+- Crouch.
+- Interaction.
+- Primary tool.
+- Secondary tool.
+- Inventory.
+- Map.
+- Pause.
+
+Support configurable button placement, sensitivity and opacity.
+
+Controls must adapt to the actual gameplay context.
+
+For example, vehicle controls should replace unnecessary walking controls while driving.
+
+## 7.3 Gamepad
+
+Implement:
+
+- Left stick movement.
+- Right stick camera.
+- Trigger actions.
+- Interaction.
+- Vehicle control.
+- Menu navigation.
+- Equipment selection.
+
+## 7.4 Unified input manager
+
+All control types must use one shared input abstraction.
+
+Prevent duplicate actions when multiple input systems are active.
+
+==================================================
+PART 8 — PHYSICS AND SCIENTIFIC REALISM
+==================================================
+
+This is a non-negotiable system.
+
+Implement physically consistent models at an explicitly defined simulation fidelity.
+
+Do not claim full physical realism if the engine uses approximations.
+
+## 8.1 Gravity
+
+Use the appropriate local gravitational acceleration for the environment.
+
+Distinguish:
+
+- Earth gravity.
+- Moon gravity.
+- Mars gravity.
+- Orbital free fall.
+- Microgravity gameplay.
+
+Do not use the same gravity on all planets.
+
+## 8.2 Character movement
+
+Use:
+
+- Acceleration.
+- Velocity.
+- Momentum.
+- Friction.
+- Ground contact.
+- Collision response.
+- Slope handling.
+- Jump impulse.
+- Gravity.
+
+In microgravity:
+
+- Astronaut movement must respect momentum.
+- External forces change velocity.
+- Movement requires appropriate propulsion or contact forces.
+- The astronaut must not stop instantly without a force or interaction.
+
+## 8.3 Rover physics
+
+Implement:
+
+- Wheel rotation.
+- Wheel traction.
+- Suspension.
+- Steering.
+- Acceleration.
+- Braking.
+- Terrain collision.
+- Slope stability.
+- Wheel slip.
+- Battery consumption.
+- Vehicle mass.
+
+Do not allow rovers to drive through terrain or climb physically impossible slopes.
+
+## 8.4 Spacecraft physics
+
+Use:
+
+- Newtonian motion.
+- Thrust.
+- Mass.
+- Propellant consumption.
+- Momentum.
+- Delta-v.
+- Orbital mechanics.
+- Attitude control.
+
+Spacecraft must not behave like aircraft inside the vacuum of space.
+
+## 8.5 Energy conservation
+
+Power systems must track:
+
+- Generation.
+- Consumption.
+- Battery storage.
+- Battery discharge.
+- System loads.
+- Power failures.
+
+## 8.6 Environmental simulation
+
+Use scientifically supported environmental conditions.
+
+Do not invent weather observations.
+
+Clearly distinguish measured conditions, historical observations, model-derived estimates and simulated scenarios.
+
+## 8.7 Physics validation
+
+Create automated tests for:
+
+- Gravity.
+- Movement.
+- Momentum.
+- Rover stability.
+- Collision.
+- Orbital calculations.
+- Thrust.
+- Fuel consumption.
+- Energy balance.
+
+==================================================
+PART 9 — NASA DATA-DRIVEN GAME WORLD
+==================================================
+
+Use the NASA datasets and reference material supplied by the project owner.
+
+Inspect the actual supplied source material and existing project data registry before implementing new integrations.
+
+Do not ask the project owner to provide again what is already available in the project.
+
+## 9.1 Terrain data
+
+Use:
+
+- HiRISE.
+- CTX.
+- MOLA.
+- LOLA.
+- SLDEM.
+
+Connect the appropriate datasets to planetary terrain and navigation.
+
+## 9.2 Geological and mineral data
+
+Use verified available data from:
+
+- CRISM.
+- THEMIS.
+- Other relevant official planetary science instruments.
+
+Implement:
+
+- Mineral target visualization.
+- Scientific target selection.
+- Spectral information display.
+- Research mission objectives.
+- Sample collection.
+- Scientific data recording.
+
+A spectral signature must not automatically be presented as a confirmed mineral identification unless supported by the source and interpretation method.
+
+## 9.3 Environmental data
+
+Use relevant datasets from:
+
+- MEDA.
+- REMS.
+- Other verified environmental sources.
+
+Maintain instrument and location attribution.
+
+Important source restrictions:
+
+- REMS is a Curiosity instrument associated with Gale Crater.
+- RAD is a Curiosity instrument associated with Gale Crater.
+- Do not label those observations as direct Perseverance/Jezero measurements.
+- Jezero radiation scenarios must use appropriate measurements or clearly labeled model-derived information.
+- Do not treat historical observations as live weather.
+
+## 9.4 Radiation
+
+Display:
+
+- Radiation source.
+- Measurement units.
+- Time interval.
+- Instrument.
+- Mission location.
+- Source date.
+- Data classification.
+
+Do not invent local radiation values for a location without supporting measurements or a documented model.
+
+## 9.5 Orbital and spacecraft data
+
+Preserve and use NASA JPL Horizons.
+
+Implement:
+
+- Ephemeris data.
+- Position.
+- Velocity.
+- Orbital visualization.
+- Mission navigation.
+- Historical trajectory scenarios.
+
+## 9.6 Data source indicators
+
+Every data-driven screen must display:
+
+- Source.
+- Dataset.
+- Units.
+- Observation date.
+- Data classification.
+- Resolution.
+- Location coverage.
+- Retrieval status.
+
+Labels:
+
+- MEASURED.
+- DERIVED.
+- ESTIMATED.
+- SIMULATED.
+- REFERENCE.
+- UNVERIFIED.
+
+Never silently replace missing real data with fabricated values.
+
+==================================================
+PART 10 — REALISTIC SURVIVAL AND LIFE SUPPORT
+==================================================
+
+Implement a survival system.
+
+## 10.1 Astronaut status
+
+Track:
+
+- Health.
+- Oxygen supply.
+- Suit pressure.
+- Suit integrity.
+- Temperature.
+- Battery.
+- Radiation exposure.
+- Communication.
+- Equipment status.
+
+## 10.2 Equipment
+
+Implement:
+
+- Life-support backpack.
+- Oxygen system.
+- Communication unit.
+- Navigation system.
+- Scientific scanner.
+- Sample container.
+- Repair tools.
+- Flashlight.
+- Emergency beacon.
+
+Equipment must have meaningful operational constraints.
+
+## 10.3 Survival decisions
+
+Players must:
+
+- Monitor life support.
+- Plan exploration routes.
+- Maintain communication.
+- Avoid equipment damage.
+- Monitor energy consumption.
+- Return before critical resources are exhausted.
+
+Do not create fictional human survival thresholds and label them as NASA standards.
+
+Use source-backed limits or clearly identified educational simulation parameters.
+
+==================================================
+PART 11 — SCIENTIFIC GAMEPLAY AND INTERACTION
+==================================================
+
+Create fully interactive scientific gameplay.
+
+## 11.1 Scientific instruments
+
+Implement usable equipment:
+
+- Spectrometer.
+- Camera.
+- Geological scanner.
+- Sample drill.
+- Soil analysis equipment.
+- Environmental sensor.
+- Navigation system.
+- Communication beacon.
+- Repair toolkit.
+
+Only implement specific instrument capabilities that are supported by the equipment model.
+
+## 11.2 Scientific missions
+
+Examples:
+
+- Collect geological samples.
+- Survey a crater.
+- Measure terrain slopes.
+- Map a scientific region.
+- Analyze rock spectra.
+- Deploy an instrument.
+- Establish a communication station.
+- Inspect geological formations.
+- Return scientific data.
+
+## 11.3 Sample collection
+
+Record:
+
+- Sample ID.
+- Geographic coordinates.
+- Elevation where available.
+- Collection time.
+- Instrument.
+- Dataset reference.
+- Collection conditions.
+- Sample classification.
+- Analysis results.
+
+Clearly identify game-generated sample data as simulated.
+
+==================================================
+PART 12 — COMPETITIVE MULTIPLAYER GAMEPLAY
+==================================================
+
+Implement modern squad-based multiplayer gameplay.
+
+## 12.1 Match size
+
+Design the architecture to support scalable multiplayer.
+
+Initial performance target:
+
+- 20 players per match.
+
+Expandable target:
+
+- 40 players.
+- Higher player counts only after load testing and server capacity verification.
+
+Do not advertise 100-player support until it is actually tested.
+
+## 12.2 Squad system
+
+- 2–4 player squads initially.
+- Squad leader.
+- Crew roles.
+- Team markers.
+- Shared mission objectives.
+- Communication.
+- Equipment planning.
+- Cooperative operations.
+
+Roles:
+
+- Commander.
+- Pilot.
+- Engineer.
+- Scientist.
+
+## 12.3 Competitive mission modes
+
+A. Planetary Survival.
+
+B. Squad Expedition.
+
+C. Scientific Competition.
+
+D. Emergency Rescue.
+
+E. Exploration Challenge.
+
+F. Mission Engineering Challenge.
+
+## 12.4 Competitive mechanics
+
+Use:
+
+- Matchmaking.
+- Lobby.
+- Ready system.
+- Match start.
+- Team assignment.
+- Mission objectives.
+- Mission timer.
+- Leaderboard.
+- Extraction.
+- Match results.
+- Spectator mode.
+- Replay where feasible.
+
+Competition should be based on:
+
+- Scientific data quality.
+- Objective completion.
+- Crew safety.
+- Resource efficiency.
+- Equipment preservation.
+- Navigation quality.
+- Mission success.
+- Data delivery.
+
+Do not add fictional combat weapons.
+
+Players compete through exploration, engineering, science, resource management and mission execution.
+
+## 12.5 Multiplayer synchronization
+
+Synchronize:
+
+- Character positions.
+- Character rotations.
+- Animation states.
+- Vehicle states.
+- Equipment usage.
+- Mission objectives.
+- Scientific samples.
+- Team status.
+- Match events.
+
+Use authoritative server-side validation for:
+
+- Player movement.
+- Objective completion.
+- Inventory.
+- Sample collection.
+- Vehicle occupancy.
+- Mission results.
+- Scoring.
+
+Implement interpolation, prediction and reconciliation where appropriate.
+
+==================================================
+PART 13 — MAP, RADAR AND NAVIGATION
+==================================================
+
+Create a professional navigation system.
+
+Features:
+
+- Full planetary map.
+- Local terrain map.
+- Player location.
+- Squad locations.
+- Mission objectives.
+- Scientific targets.
+- Landing zone.
+- Extraction zone.
+- Rover route.
+- Elevation.
+- Terrain hazards.
+- Slope map.
+- Coordinates.
+- Scale.
+- North/east orientation as appropriate.
+
+Use correct planetary coordinate systems.
+
+Do not confuse image pixels with geographic coordinates.
+
+Allow players to switch between:
+
+- Visual terrain map.
+- Elevation map.
+- Slope map.
+- Scientific data layer.
+- Mission objective layer.
+
+Every displayed data layer must identify its source.
+
+==================================================
+PART 14 — INTERACTIVE SPACECRAFT AND VEHICLES
+==================================================
+
+Implement:
+
+- Spacecraft interior.
+- Cockpit.
+- Navigation panel.
+- Engineering panel.
+- Power systems.
+- Propulsion controls.
+- Communication systems.
+- Airlock.
+- Docking interaction.
+
+Implement a playable launch sequence.
+
+Implement rover operations:
+
+- Enter vehicle.
+- Exit vehicle.
+- Drive.
+- Brake.
+- Steer.
+- Monitor battery.
+- Monitor vehicle damage.
+- Collect samples.
+- Return to base.
+
+All systems must connect to the existing engineering mission configuration.
+
+==================================================
+PART 15 — MISSION CONTROL AND HUD
+==================================================
+
+Create an in-game HUD.
+
+## Main HUD
+
+Display:
+
+- Astronaut status.
+- Oxygen.
+- Battery.
+- Suit pressure.
+- Health.
+- Temperature.
+- Radiation status.
+- Compass.
+- Coordinates.
+- Mission objectives.
+- Squad status.
+- Communication.
+- Environmental warnings.
+
+## Interactive map
+
+Provide:
+
+- Mini-map.
+- Full map.
+- Squad markers.
+- Objectives.
+- Scientific targets.
+- Navigation route.
+
+## Mission control panel
+
+Provide:
+
+- Mission timeline.
+- Crew status.
+- Spacecraft status.
+- Telemetry.
+- Communication.
+- Mission events.
+- Scientific results.
+- Data quality.
+- Risk warnings.
+
+All displayed values must come from actual simulation state or clearly identified data sources.
+
+==================================================
+PART 16 — SOUND AND AUDIO DESIGN
+==================================================
+
+Create an original audio system.
+
+Include:
+
+- Main menu ambience.
+- Spacecraft interior audio.
+- Radio communication.
+- Astronaut suit breathing where appropriate.
+- Tool sounds.
+- Rover movement.
+- Equipment operation.
+- Environmental audio.
+- Warning alerts.
+- Mission completion audio.
+
+Respect actual environmental conditions.
+
+For example, do not play ordinary sound propagation through a vacuum as if the astronaut directly hears an explosion outside the suit.
+
+Use suit microphones, vibration transmission or radio communication where appropriate.
+
+Provide volume controls and audio settings.
+
+==================================================
+PART 17 — VISUAL EFFECTS AND GRAPHICS
+==================================================
+
+Implement high-quality graphics:
+
+- Physically based materials.
+- Realistic lighting.
+- Shadow maps.
+- Planetary sky rendering.
+- Surface dust.
+- Particle effects.
+- Terrain details.
+- Rover tracks.
+- Footprints.
+- Equipment interaction effects.
+- Spacecraft exhaust.
+- UI transitions.
+
+Effects must respect environmental conditions.
+
+Do not create atmospheric clouds or wind effects in environments where they are physically inappropriate.
+
+Implement graphics presets:
+
+- Low.
+- Medium.
+- High.
+- Ultra.
+
+Support lower-end hardware with graceful quality reduction.
+
+==================================================
+PART 18 — CAREER AND PROGRESSION
+==================================================
+
+Create:
+
+- Astronaut career.
+- Mission history.
+- Training.
+- Skills.
+- Achievements.
+- Exploration records.
+- Scientific reputation.
+- Mission performance.
+- Unlocked missions.
+- Profile statistics.
+
+Progression must reward actual skills and accomplishments.
+
+No pay-to-win.
+
+No paid gameplay advantages.
+
+Cosmetic unlocks must not change physical performance.
+
+==================================================
+PART 19 — INTEGRATE THE EXISTING ENGINEERING SIMULATOR
+==================================================
+
+The existing mission engineering system must remain a central part of the game.
+
+Connect:
+
+- Mission design.
+- Spacecraft configuration.
+- Payload.
+- Launch vehicle.
+- Mass budget.
+- Propulsion.
+- Power.
+- Orbit.
+- Delta-v.
+- Requirements.
+- Risks.
+- Trade studies.
+- NASA lifecycle.
+- CML.
+- Mission simulation.
+- Mission reports.
+
+Example:
+
+If a player designs a spacecraft with insufficient power, the actual gameplay must reflect that limitation.
+
+If a payload exceeds launcher capacity, launch readiness must fail.
+
+If the mission has insufficient propellant, mission capability must be reduced.
+
+If a player changes mission configuration, relevant gameplay parameters must update.
+
+Do not bypass the engineering systems with unrelated hardcoded gameplay values.
+
+==================================================
+PART 20 — AI MISSION CONTROL
+==================================================
+
+Implement an AI-assisted mission control assistant.
+
+It should:
+
+- Explain objectives.
+- Interpret available telemetry.
+- Explain environmental alerts.
+- Identify possible equipment problems.
+- Explain engineering warnings.
+- Help plan navigation.
+- Explain scientific data.
+- Summarize mission status.
+
+Use verified data and actual game state as context.
+
+The AI must not invent NASA facts.
+
+It must clearly identify uncertain recommendations.
+
+The AI must not autonomously execute consequential actions without player authorization.
+
+If external AI services are unavailable, provide a local rule-based fallback.
+
+==================================================
+PART 21 — BACKEND, DATABASE AND SECURITY
+==================================================
+
+Inspect and extend the existing backend.
+
+Implement:
+
+- Authentication.
+- Player profiles.
+- Matchmaking.
+- Squad management.
+- Game sessions.
+- Mission synchronization.
+- Player state.
+- Inventory.
+- Scientific discoveries.
+- Mission history.
+- Leaderboards.
+- Persistent progression.
+
+Use server-authoritative validation for important multiplayer events.
+
+Do not trust clients for scoring, rewards or mission success.
+
+Protect API keys and credentials.
+
+Do not expose NASA API keys in frontend code.
+
+Use secure session management.
+
+Validate all user input.
+
+Add rate limits and connection management.
+
+==================================================
+PART 22 — PERFORMANCE AND TECHNICAL OPTIMIZATION
+==================================================
+
+The game must be playable, not just visually impressive.
+
+Implement:
+
+- Asset streaming.
+- Terrain tile streaming.
+- Level-of-detail.
+- Geometry instancing.
+- Texture compression.
+- Efficient collision.
+- Physics optimization.
+- Object pooling.
+- Animation optimization.
+- Network interpolation.
+- State synchronization optimization.
+- Memory management.
+- Error recovery.
+
+Avoid unnecessary React re-renders.
+
+Avoid excessive real-time physics calculations for distant players.
+
+Use appropriate simulation fidelity based on distance and gameplay importance.
+
+Create a performance monitor with:
+
+- FPS.
+- Frame time.
+- Memory usage where available.
+- Network latency.
+- Packet loss where measurable.
+- Active player count.
+- Terrain tile loading status.
+
+Do not claim a performance target unless measured.
+
+==================================================
+PART 23 — TESTING AND QUALITY ASSURANCE
+==================================================
+
+Test the complete experience.
+
+## UI/UX tests
+
+- All menus open.
+- Navigation works.
+- Buttons work.
+- Settings persist.
+- Responsive layouts work.
+- Loading states work.
+- Error states work.
+
+## 3D tests
+
+- Astronaut movement.
+- Camera.
+- Animations.
+- Collision.
+- Terrain loading.
+- Terrain navigation.
+- Rover driving.
+- Spacecraft interaction.
+
+## Physics tests
+
+- Gravity.
+- Momentum.
+- Acceleration.
+- Jumping.
+- Rover traction.
+- Orbital motion.
+- Thrust.
+- Propellant.
+- Power balance.
+
+## NASA data tests
+
+- Source validation.
+- Coordinate transformation.
+- Elevation decoding.
+- Terrain scale.
+- Units.
+- Metadata.
+- Provenance.
+- Stale-data handling.
+
+## Multiplayer tests
+
+- Squad creation.
+- Matchmaking.
+- Player synchronization.
+- Vehicle synchronization.
+- Objective synchronization.
+- Disconnect recovery.
+- Server validation.
+- Match completion.
+
+## Final checks
+
+- TypeScript.
+- Lint.
+- Unit tests.
+- Integration tests.
+- Production build.
+- Browser runtime.
+- Desktop.
+- Mobile.
+- Network performance.
+
+Do not hide errors or remove tests to make the build pass.
+
+==================================================
+PART 24 — REQUIRED IMPLEMENTATION ORDER
+==================================================
+
+Implement in the following order while preserving previous functionality.
+
+STAGE 1 — PROJECT AUDIT
+Inspect existing architecture and produce an implementation map.
+
+STAGE 2 — UI/UX FOUNDATION
+Create the complete design system, main menu, profile, lobby and navigation.
+
+STAGE 3 — 3D FOUNDATION
+Create the world renderer, terrain system, astronaut model and camera.
+
+STAGE 4 — PLAYER GAMEPLAY
+Implement movement, animations, interactions and input systems.
+
+STAGE 5 — NASA TERRAIN INTEGRATION
+Connect actual planetary datasets to playable terrain.
+
+STAGE 6 — PHYSICS
+Implement gravity, movement, rover and spacecraft physics.
+
+STAGE 7 — SURVIVAL
+Implement life support, equipment and environmental constraints.
+
+STAGE 8 — SCIENTIFIC GAMEPLAY
+Implement scanning, sampling, navigation and scientific objectives.
+
+STAGE 9 — MULTIPLAYER
+Implement squads, matchmaking and authoritative synchronization.
+
+STAGE 10 — MISSION ENGINEERING
+Connect gameplay to the existing engineering systems.
+
+STAGE 11 — AUDIO AND VISUAL POLISH
+Implement sound, effects, graphics settings and transitions.
+
+STAGE 12 — OPTIMIZATION AND TESTING
+Run all verification tests and production builds.
+
+Do not stop after generating UI screens or 3D previews.
+
+Every stage must produce functional, integrated features.
+
+==================================================
+PART 25 — FINAL ACCEPTANCE CHECKLIST
+==================================================
+
+The game is not complete until the following can be demonstrated:
+
+UI/UX:
+[ ] Professional startup screen.
+[ ] Main menu.
+[ ] Player profile.
+[ ] Character selection.
+[ ] Game mode selection.
+[ ] Squad lobby.
+[ ] Matchmaking.
+[ ] Settings.
+[ ] Mission briefing.
+
+3D:
+[ ] Playable astronaut.
+[ ] Smooth third-person camera.
+[ ] Character animations.
+[ ] Interactive environment.
+[ ] Real planetary terrain.
+[ ] Terrain collision.
+[ ] Rover.
+[ ] Spacecraft interior.
+[ ] Cockpit.
+
+Controls:
+[ ] Desktop controls.
+[ ] Mobile controls.
+[ ] Gamepad support.
+
+Physics:
+[ ] Environment-specific gravity.
+[ ] Momentum.
+[ ] Acceleration.
+[ ] Rover dynamics.
+[ ] Spacecraft dynamics.
+[ ] Power and energy balance.
+
+NASA:
+[ ] Verified terrain datasets.
+[ ] Correct planetary coordinates.
+[ ] Correct elevation units.
+[ ] Data provenance.
+[ ] Scientific instruments.
+[ ] Environmental source attribution.
+[ ] NASA Horizons preserved.
+[ ] No fabricated NASA measurements.
+
+Gameplay:
+[ ] Mission objectives.
+[ ] Scientific exploration.
+[ ] Sample collection.
+[ ] Survival.
+[ ] Extraction.
+[ ] Squad cooperation.
+[ ] Competitive scoring.
+
+Multiplayer:
+[ ] Squad creation.
+[ ] Matchmaking.
+[ ] Player synchronization.
+[ ] Objective synchronization.
+[ ] Server validation.
+[ ] Match results.
+
+Engineering:
+[ ] Mission configuration integration.
+[ ] Launch readiness.
+[ ] Mass and power constraints.
+[ ] Orbital planning.
+[ ] Mission risk.
+[ ] Mission reports.
+
+Quality:
+[ ] Responsive interface.
+[ ] Optimized 3D.
+[ ] Sound system.
+[ ] Graphics settings.
+[ ] Production build.
+[ ] Runtime testing.
+
+==================================================
+PART 26 — FINAL DEVELOPMENT REPORT
+==================================================
+
+At the end, provide:
+
+1. Complete architecture audit.
+2. Files preserved.
+3. Files modified.
+4. Files created.
+5. UI/UX implementation.
+6. 3D implementation.
+7. Physics implementation.
+8. NASA datasets actually connected.
+9. Scientific systems implemented.
+10. Multiplayer systems implemented.
+11. Backend and database changes.
+12. Tests performed.
+13. Production build result.
+14. Performance measurements.
+15. Known limitations.
+16. Features still incomplete.
+17. Exact instructions to run the complete game.
+
+Do not claim that unimplemented features work.
+
+Do not claim that a dataset is integrated when only its name is displayed.
+
+Do not claim a realistic physics system if only visual animations are implemented.
+
+Do not claim multiplayer support without actual connected clients and server-side synchronization.
+
+# FINAL VISION
+
+Create a complete modern multiplayer planetary exploration game.
+
+The player should experience:
+
+A premium third-person astronaut character,
+smooth and responsive controls,
+real planetary environments,
+NASA-based terrain,
+scientific exploration,
+realistic survival,
+physically consistent movement,
+cooperative squad missions,
+competitive objectives,
+spacecraft and rover operations,
+mission engineering,
+and meaningful scientific results.
+
+The gameplay quality should be comparable in responsiveness and polish to leading multiplayer games.
+
+The scientific foundation must be based on real data, verified sources and physically consistent simulation.
+
+The final product must not be a collection of disconnected demos.
+
+It must be ONE connected game.
+
+START WITH A FULL EXISTING PROJECT AUDIT.
+
+PRESERVE ALL WORKING SYSTEMS.
+
+IMPLEMENT THE COMPLETE EXPERIENCE.
+
+INTEGRATE EVERY SYSTEM.
+
+TEST EVERY IMPORTANT FEATURE.
+
+DELIVER A PLAYABLE GAME, NOT JUST A VISUAL PROTOTYPE.

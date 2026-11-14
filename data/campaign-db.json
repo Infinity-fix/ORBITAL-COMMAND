@@ -1,0 +1,1149 @@
+{
+  "campaigns": [
+    {
+      "id": "camp-mission-1794635025684-1794635221098",
+      "missionName": "Ares Horizon Orbiter",
+      "destinationId": "leo",
+      "missionType": "Orbiter",
+      "score": 87,
+      "grade": "A",
+      "passed": true,
+      "costMUsd": 524.8,
+      "durationDays": 720,
+      "completedAt": "2026-11-14T05:47:01.098Z",
+      "failureReason": null
+    }
+  ],
+  "unlockedAchievements": [
+    "ach-first-orbit",
+    "ach-zero-critical",
+    "ach-budget-hawk"
+  ],
+  "squads": {
+    "ORB-ASZK": {
+      "code": "ORB-ASZK",
+      "name": "Ares Operations Team",
+      "leaderId": "mem-1794579932582-nr3ms",
+      "members": [
+        {
+          "id": "mem-1794579932582-nr3ms",
+          "name": "Flight Director",
+          "role": "Mission Commander",
+          "isLeader": true,
+          "online": false,
+          "joinedAt": "2026-11-13T14:25:32.582Z"
+        }
+      ],
+      "mission": {
+        "id": "mission-ares-surveyor",
+        "name": "Ares Horizon Orbiter",
+        "description": "Orbital reconnaissance mission to Mars studying ancient fluvial mineralogy, subsurface water ice, and upper atmospheric escape.",
+        "category": "Planetary Exploration",
+        "destinationId": "mars",
+        "missionType": "Orbiter",
+        "difficulty": "Standard",
+        "durationDays": 720,
+        "budgetCapMUsd": 650,
+        "primaryObjective": "Characterize hydrated mineral deposits and subsurface ice sheets from 400 km Mars orbit.",
+        "secondaryObjectives": [
+          "Map Mars crustal magnetic anomalies across southern highlands",
+          "Demonstrate Ka-band high-rate deep-space telemetry downlink"
+        ],
+        "successCriteria": [
+          "Achieve Mars orbit capture within 10% of nominal 400 km altitude",
+          "Collect >= 80% science payload return across primary observation campaigns",
+          "Maintain positive power and propellant margins through End of Life disposal"
+        ],
+        "selectedPayloadIds": [
+          "pay-hirise",
+          "pay-ir-spec",
+          "pay-mag"
+        ],
+        "launchVehicleId": "lv-falcon-heavy",
+        "spacecraft": {
+          "structureId": "bus-planetary",
+          "propulsionId": "bipropellant",
+          "powerId": "solar-high-eff",
+          "solarPanelAreaM2": 18,
+          "batteryCapacityWh": 4200,
+          "propellantMassKg": 2800,
+          "commsTier": "Ka-Band Deep Space",
+          "thermalTier": "Active Louvers & Heaters",
+          "navigationTier": "Deep Space Autonomous Optical",
+          "attitudeControl": "Reaction Wheels + RCS",
+          "redundancyLevel": "Selective Redundancy"
+        },
+        "orbitalPlan": {
+          "orbitType": "Mars Orbit",
+          "departureAltitudeKm": 300,
+          "targetAltitudeKm": 400,
+          "inclinationDeg": 93,
+          "eccentricity": 0.01,
+          "aerobrakingAssisted": false,
+          "contingencyDeltaVPercent": 10
+        },
+        "requirements": [
+          {
+            "id": "req-mass",
+            "code": "SYS-MASS-01",
+            "title": "Launch Vehicle Mass Margin",
+            "description": "Spacecraft wet mass must remain within selected launch vehicle destination payload capacity.",
+            "category": "Mass",
+            "priority": "Mandatory",
+            "targetDisplay": "<= 12,500 kg",
+            "actualDisplay": "3,969 kg (+68.2%)",
+            "verificationMethod": "Analysis",
+            "status": "Passed",
+            "objectiveLink": "Characterize hydrated mineral deposits and subsurface ice sheets from 400 km Mars orbit.",
+            "manualVerified": false
+          },
+          {
+            "id": "req-power",
+            "code": "SYS-PWR-02",
+            "title": "Positive Power & Eclipse Margin",
+            "description": "Power generation at destination solar flux must exceed average bus + payload load with >= 1.2h eclipse battery.",
+            "category": "Power",
+            "priority": "Mandatory",
+            "targetDisplay": ">= 699 W & >= 1.2h",
+            "actualDisplay": "2635 W (+277%) · 6.01h",
+            "verificationMethod": "Test",
+            "status": "Passed",
+            "objectiveLink": "Characterize hydrated mineral deposits and subsurface ice sheets from 400 km Mars orbit.",
+            "manualVerified": false
+          },
+          {
+            "id": "req-deltav",
+            "code": "ORB-DV-03",
+            "title": "Mission Delta-V Capability",
+            "description": "Available Tsiolkovsky delta-v must cover transfer, capture, and contingency maneuvers.",
+            "category": "Orbital",
+            "priority": "Mandatory",
+            "targetDisplay": ">= 3.76 km/s",
+            "actualDisplay": "3.81 km/s (Margin: +0.05 km/s)",
+            "verificationMethod": "Analysis",
+            "status": "Passed",
+            "objectiveLink": "Characterize hydrated mineral deposits and subsurface ice sheets from 400 km Mars orbit.",
+            "manualVerified": false
+          },
+          {
+            "id": "req-science",
+            "code": "SCI-PAY-04",
+            "title": "Science Payload Complement",
+            "description": "Mission must carry at least 2 compatible instruments with >= 35 aggregate science value.",
+            "category": "Science",
+            "priority": "High",
+            "targetDisplay": ">= 2 instruments · >= 35 pts",
+            "actualDisplay": "3 instruments · 68 pts",
+            "verificationMethod": "Demonstration",
+            "status": "Passed",
+            "objectiveLink": "Characterize hydrated mineral deposits and subsurface ice sheets from 400 km Mars orbit.",
+            "manualVerified": false
+          },
+          {
+            "id": "req-budget",
+            "code": "MGT-BUD-05",
+            "title": "Budget Cap & Contingency",
+            "description": "Total estimated cost including risk mitigations must stay within the mission budget cap.",
+            "category": "Budget",
+            "priority": "Mandatory",
+            "targetDisplay": "<= $650M",
+            "actualDisplay": "$580.7M (10.7% reserve)",
+            "verificationMethod": "Inspection",
+            "status": "Passed",
+            "objectiveLink": "Map Mars crustal magnetic anomalies across southern highlands",
+            "manualVerified": false
+          },
+          {
+            "id": "req-safety",
+            "code": "SAF-RSK-06",
+            "title": "Critical Risk Mitigation",
+            "description": "All Critical (score >= 16) mission risks must be mitigated before Flight Readiness Review.",
+            "category": "Safety",
+            "priority": "Mandatory",
+            "targetDisplay": "0 unmitigated Critical risks",
+            "actualDisplay": "2 unmitigated Critical",
+            "verificationMethod": "Inspection",
+            "status": "Failed",
+            "objectiveLink": "Achieve Mars orbit capture within 10% of nominal 400 km altitude",
+            "manualVerified": false
+          }
+        ],
+        "risks": [
+          {
+            "id": "risk-1",
+            "code": "RSK-001",
+            "title": "Propellant Margin Depletion During Orbit Capture",
+            "description": "Navigation dispersion or finite-burn gravity losses could require additional delta-v at arrival.",
+            "probability": 4,
+            "consequence": 5,
+            "score": 20,
+            "severity": "Critical",
+            "mitigationStrategy": "Carry >= 10% delta-v propellant reserve and verify optical navigation updates prior to MOI.",
+            "mitigationCostMUsd": 12,
+            "mitigated": false,
+            "residualScore": 8,
+            "ownerRole": "Propulsion Engineer"
+          },
+          {
+            "id": "risk-2",
+            "code": "RSK-002",
+            "title": "Solar / Thermal Power Deficit in Eclipse or Low Flux",
+            "description": "Reduced irradiance at destination or dust accumulation drops array output below essential bus load.",
+            "probability": 4,
+            "consequence": 4,
+            "score": 16,
+            "severity": "Critical",
+            "mitigationStrategy": "Upgrade to triple-junction GaAs arrays or RTG and size batteries for 4+ hour eclipse survival.",
+            "mitigationCostMUsd": 16,
+            "mitigated": false,
+            "residualScore": 6,
+            "ownerRole": "Spacecraft Engineer"
+          },
+          {
+            "id": "risk-3",
+            "code": "RSK-003",
+            "title": "Deep-Space Telemetry Link Blackout",
+            "description": "High-gain antenna pointing drift or solar conjunction degrades science data downlink.",
+            "probability": 3,
+            "consequence": 3,
+            "score": 9,
+            "severity": "Moderate",
+            "mitigationStrategy": "Add Ka-band redundant transponder and autonomous safe-mode sun/Earth acquisition.",
+            "mitigationCostMUsd": 9,
+            "mitigated": false,
+            "residualScore": 4,
+            "ownerRole": "Navigation Specialist"
+          },
+          {
+            "id": "risk-4",
+            "code": "RSK-004",
+            "title": "Launch Fairing Vibro-Acoustic Overload",
+            "description": "Max-Q acoustic pressure stresses sensitive optical baffles and deployable booms.",
+            "probability": 2,
+            "consequence": 5,
+            "score": 10,
+            "severity": "Moderate",
+            "mitigationStrategy": "Perform full acoustic chamber qualification and reinforce deployment latches.",
+            "mitigationCostMUsd": 10,
+            "mitigated": false,
+            "residualScore": 4,
+            "ownerRole": "Risk and Safety Officer"
+          }
+        ],
+        "gates": [
+          {
+            "code": "MCR",
+            "name": "Mission Concept Review",
+            "lifecyclePhase": "Pre-Phase A: Concept Studies",
+            "passed": false,
+            "blockedReasons": []
+          },
+          {
+            "code": "SRR",
+            "name": "System Requirements Review",
+            "lifecyclePhase": "Phase A: Concept & Tech Dev",
+            "passed": false,
+            "blockedReasons": []
+          },
+          {
+            "code": "MDR",
+            "name": "Mission Definition Review",
+            "lifecyclePhase": "Phase A: Concept & Tech Dev",
+            "passed": false,
+            "blockedReasons": []
+          },
+          {
+            "code": "PDR",
+            "name": "Preliminary Design Review",
+            "lifecyclePhase": "Phase B: Preliminary Design",
+            "passed": false,
+            "blockedReasons": []
+          },
+          {
+            "code": "CDR",
+            "name": "Critical Design Review",
+            "lifecyclePhase": "Phase C: Final Design & Fab",
+            "passed": false,
+            "blockedReasons": [
+              "2 Critical risk(s) remain unmitigated in the Risk Register.",
+              "1 Mandatory requirement(s) currently failing verification."
+            ]
+          },
+          {
+            "code": "SIR",
+            "name": "System Integration Review",
+            "lifecyclePhase": "Phase D: Assembly, Integration & Test",
+            "passed": false,
+            "blockedReasons": [
+              "2 Critical risk(s) remain unmitigated in the Risk Register.",
+              "1 Mandatory requirement(s) currently failing verification."
+            ]
+          },
+          {
+            "code": "ORR",
+            "name": "Operational Readiness Review",
+            "lifecyclePhase": "Phase D: Assembly, Integration & Test",
+            "passed": false,
+            "blockedReasons": [
+              "2 Critical risk(s) remain unmitigated in the Risk Register.",
+              "1 Mandatory requirement(s) currently failing verification."
+            ]
+          },
+          {
+            "code": "FRR",
+            "name": "Flight Readiness Review",
+            "lifecyclePhase": "Phase D: Assembly, Integration & Test",
+            "passed": false,
+            "blockedReasons": [
+              "2 Critical risk(s) remain unmitigated in the Risk Register.",
+              "1 Mandatory requirement(s) currently failing verification.",
+              "Complete prior reviews (MCR, SRR, MDR, PDR, CDR, SIR, ORR) before Flight Readiness."
+            ]
+          },
+          {
+            "code": "PLAR",
+            "name": "Post-Launch Assessment Review",
+            "lifecyclePhase": "Phase E: Operations & Sustainment",
+            "passed": false,
+            "blockedReasons": [
+              "Spacecraft must complete Launch & Cruise before Post-Launch Assessment."
+            ]
+          },
+          {
+            "code": "PFAR",
+            "name": "Post-Flight Assessment Review",
+            "lifecyclePhase": "Phase F: Closeout",
+            "passed": false,
+            "blockedReasons": [
+              "Mission closeout (End of Life) must finish before Post-Flight Assessment."
+            ]
+          }
+        ],
+        "simulation": {
+          "currentStage": "Mission Concept",
+          "stageProgressPct": 0,
+          "countdownSeconds": 10,
+          "isLaunching": false,
+          "launchSequenceStep": "Standby on Pad",
+          "missionElapsedDays": 0,
+          "fuelRemainingPct": 100,
+          "batteryChargePct": 100,
+          "commsLinkPct": 100,
+          "thermalTempC": 21,
+          "scienceCollectedPct": 0,
+          "objectivesCompleted": [],
+          "activeEvent": null,
+          "failed": false,
+          "failureReason": null,
+          "failedStage": null,
+          "completed": false,
+          "endOfLifeOption": null,
+          "logs": [
+            {
+              "id": "log-init",
+              "timestamp": "2026-11-13T14:24:39.868Z",
+              "stage": "Mission Concept",
+              "title": "Mission Baseline Initialized",
+              "detail": "Ares Horizon Orbiter baseline loaded. Review spacecraft, orbital trajectory, and systems gates before launch.",
+              "severity": "info"
+            },
+            {
+              "id": "log-1794579891731-6n1mn",
+              "timestamp": "2026-11-13T14:24:51.731Z",
+              "stage": "Mission Concept",
+              "category": "event",
+              "title": "3D Field Ops Deployed: Mission 5: EVA Repair Mission",
+              "detail": "Mode: career · Environment: orbital-eva.",
+              "severity": "nominal",
+              "metricSnapshot": "ORBITAL-EVA"
+            },
+            {
+              "id": "log-1794579911965-tkj9w",
+              "timestamp": "2026-11-13T14:25:11.965Z",
+              "stage": "Mission Concept",
+              "category": "event",
+              "title": "3D Field Ops Deployed: Mission 4: Mars Exploration",
+              "detail": "Mode: career · Environment: mars.",
+              "severity": "nominal",
+              "metricSnapshot": "MARS"
+            },
+            {
+              "id": "log-1794579914983-fmmy8",
+              "timestamp": "2026-11-13T14:25:14.983Z",
+              "stage": "Mission Concept",
+              "category": "telemetry",
+              "title": "Science Capture: OC-MAR-001",
+              "detail": "Raman Mineral Spectrum · MARS Sector (Fe2O3 / Mg-Smectite 842 cm⁻¹)",
+              "severity": "nominal",
+              "metricSnapshot": "Laser Raman Spectrometer"
+            },
+            {
+              "id": "log-1794579933763-wookm",
+              "timestamp": "2026-11-13T14:25:33.763Z",
+              "stage": "Mission Concept",
+              "category": "event",
+              "title": "3D Field Ops Deployed: Mission 1: Space Station Preparation",
+              "detail": "Mode: career · Environment: station.",
+              "severity": "nominal",
+              "metricSnapshot": "STATION"
+            }
+          ]
+        },
+        "createdAt": "2026-11-13T14:24:39.868Z",
+        "updatedAt": "2026-11-13T14:25:33.766Z"
+      },
+      "chat": [
+        {
+          "id": "msg-1794579932582",
+          "senderName": "Flight Loop",
+          "senderRole": "Mission Commander",
+          "text": "Flight Director initialized squad ORB-ASZK as Mission Commander.",
+          "timestamp": "2026-11-13T14:25:32.582Z",
+          "isSystem": true
+        }
+      ],
+      "updatedAt": "2026-11-13T14:25:45.037Z"
+    },
+    "ORB-G732": {
+      "code": "ORB-G732",
+      "name": "Ares Operations Team",
+      "leaderId": "mem-1794581896184-4s4w8",
+      "members": [
+        {
+          "id": "mem-1794581896184-4s4w8",
+          "name": "Flight Director",
+          "role": "Mission Commander",
+          "isLeader": true,
+          "online": false,
+          "joinedAt": "2026-11-13T14:58:16.184Z"
+        }
+      ],
+      "mission": {
+        "id": "mission-ares-surveyor",
+        "name": "Ares Horizon Orbiter",
+        "description": "Orbital reconnaissance mission to Mars studying ancient fluvial mineralogy, subsurface water ice, and upper atmospheric escape.",
+        "category": "Planetary Exploration",
+        "destinationId": "mars",
+        "missionType": "Orbiter",
+        "difficulty": "Standard",
+        "durationDays": 720,
+        "budgetCapMUsd": 650,
+        "primaryObjective": "Characterize hydrated mineral deposits and subsurface ice sheets from 400 km Mars orbit.",
+        "secondaryObjectives": [
+          "Map Mars crustal magnetic anomalies across southern highlands",
+          "Demonstrate Ka-band high-rate deep-space telemetry downlink"
+        ],
+        "successCriteria": [
+          "Achieve Mars orbit capture within 10% of nominal 400 km altitude",
+          "Collect >= 80% science payload return across primary observation campaigns",
+          "Maintain positive power and propellant margins through End of Life disposal"
+        ],
+        "selectedPayloadIds": [
+          "pay-hirise",
+          "pay-ir-spec",
+          "pay-mag"
+        ],
+        "launchVehicleId": "lv-falcon-heavy",
+        "spacecraft": {
+          "structureId": "bus-planetary",
+          "propulsionId": "bipropellant",
+          "powerId": "solar-high-eff",
+          "solarPanelAreaM2": 18,
+          "batteryCapacityWh": 4200,
+          "propellantMassKg": 2800,
+          "commsTier": "Ka-Band Deep Space",
+          "thermalTier": "Active Louvers & Heaters",
+          "navigationTier": "Deep Space Autonomous Optical",
+          "attitudeControl": "Reaction Wheels + RCS",
+          "redundancyLevel": "Selective Redundancy"
+        },
+        "orbitalPlan": {
+          "orbitType": "Mars Orbit",
+          "departureAltitudeKm": 300,
+          "targetAltitudeKm": 400,
+          "inclinationDeg": 93,
+          "eccentricity": 0.01,
+          "aerobrakingAssisted": false,
+          "contingencyDeltaVPercent": 10
+        },
+        "requirements": [
+          {
+            "id": "req-mass",
+            "code": "SYS-MASS-01",
+            "title": "Launch Vehicle Mass Margin",
+            "description": "Spacecraft wet mass must remain within selected launch vehicle destination payload capacity.",
+            "category": "Mass",
+            "priority": "Mandatory",
+            "targetDisplay": "<= 12,500 kg",
+            "actualDisplay": "3,969 kg (+68.2%)",
+            "verificationMethod": "Analysis",
+            "status": "Passed",
+            "objectiveLink": "Characterize hydrated mineral deposits and subsurface ice sheets from 400 km Mars orbit.",
+            "manualVerified": false
+          },
+          {
+            "id": "req-power",
+            "code": "SYS-PWR-02",
+            "title": "Positive Power & Eclipse Margin",
+            "description": "Power generation at destination solar flux must exceed average bus + payload load with >= 1.2h eclipse battery.",
+            "category": "Power",
+            "priority": "Mandatory",
+            "targetDisplay": ">= 699 W & >= 1.2h",
+            "actualDisplay": "2635 W (+277%) · 6.01h",
+            "verificationMethod": "Test",
+            "status": "Passed",
+            "objectiveLink": "Characterize hydrated mineral deposits and subsurface ice sheets from 400 km Mars orbit.",
+            "manualVerified": false
+          },
+          {
+            "id": "req-deltav",
+            "code": "ORB-DV-03",
+            "title": "Mission Delta-V Capability",
+            "description": "Available Tsiolkovsky delta-v must cover transfer, capture, and contingency maneuvers.",
+            "category": "Orbital",
+            "priority": "Mandatory",
+            "targetDisplay": ">= 3.76 km/s",
+            "actualDisplay": "3.81 km/s (Margin: +0.05 km/s)",
+            "verificationMethod": "Analysis",
+            "status": "Passed",
+            "objectiveLink": "Characterize hydrated mineral deposits and subsurface ice sheets from 400 km Mars orbit.",
+            "manualVerified": false
+          },
+          {
+            "id": "req-science",
+            "code": "SCI-PAY-04",
+            "title": "Science Payload Complement",
+            "description": "Mission must carry at least 2 compatible instruments with >= 35 aggregate science value.",
+            "category": "Science",
+            "priority": "High",
+            "targetDisplay": ">= 2 instruments · >= 35 pts",
+            "actualDisplay": "3 instruments · 68 pts",
+            "verificationMethod": "Demonstration",
+            "status": "Passed",
+            "objectiveLink": "Characterize hydrated mineral deposits and subsurface ice sheets from 400 km Mars orbit.",
+            "manualVerified": false
+          },
+          {
+            "id": "req-budget",
+            "code": "MGT-BUD-05",
+            "title": "Budget Cap & Contingency",
+            "description": "Total estimated cost including risk mitigations must stay within the mission budget cap.",
+            "category": "Budget",
+            "priority": "Mandatory",
+            "targetDisplay": "<= $650M",
+            "actualDisplay": "$580.7M (10.7% reserve)",
+            "verificationMethod": "Inspection",
+            "status": "Passed",
+            "objectiveLink": "Map Mars crustal magnetic anomalies across southern highlands",
+            "manualVerified": false
+          },
+          {
+            "id": "req-safety",
+            "code": "SAF-RSK-06",
+            "title": "Critical Risk Mitigation",
+            "description": "All Critical (score >= 16) mission risks must be mitigated before Flight Readiness Review.",
+            "category": "Safety",
+            "priority": "Mandatory",
+            "targetDisplay": "0 unmitigated Critical risks",
+            "actualDisplay": "2 unmitigated Critical",
+            "verificationMethod": "Inspection",
+            "status": "Failed",
+            "objectiveLink": "Achieve Mars orbit capture within 10% of nominal 400 km altitude",
+            "manualVerified": false
+          }
+        ],
+        "risks": [
+          {
+            "id": "risk-1",
+            "code": "RSK-001",
+            "title": "Propellant Margin Depletion During Orbit Capture",
+            "description": "Navigation dispersion or finite-burn gravity losses could require additional delta-v at arrival.",
+            "probability": 4,
+            "consequence": 5,
+            "score": 20,
+            "severity": "Critical",
+            "mitigationStrategy": "Carry >= 10% delta-v propellant reserve and verify optical navigation updates prior to MOI.",
+            "mitigationCostMUsd": 12,
+            "mitigated": false,
+            "residualScore": 8,
+            "ownerRole": "Propulsion Engineer"
+          },
+          {
+            "id": "risk-2",
+            "code": "RSK-002",
+            "title": "Solar / Thermal Power Deficit in Eclipse or Low Flux",
+            "description": "Reduced irradiance at destination or dust accumulation drops array output below essential bus load.",
+            "probability": 4,
+            "consequence": 4,
+            "score": 16,
+            "severity": "Critical",
+            "mitigationStrategy": "Upgrade to triple-junction GaAs arrays or RTG and size batteries for 4+ hour eclipse survival.",
+            "mitigationCostMUsd": 16,
+            "mitigated": false,
+            "residualScore": 6,
+            "ownerRole": "Spacecraft Engineer"
+          },
+          {
+            "id": "risk-3",
+            "code": "RSK-003",
+            "title": "Deep-Space Telemetry Link Blackout",
+            "description": "High-gain antenna pointing drift or solar conjunction degrades science data downlink.",
+            "probability": 3,
+            "consequence": 3,
+            "score": 9,
+            "severity": "Moderate",
+            "mitigationStrategy": "Add Ka-band redundant transponder and autonomous safe-mode sun/Earth acquisition.",
+            "mitigationCostMUsd": 9,
+            "mitigated": false,
+            "residualScore": 4,
+            "ownerRole": "Navigation Specialist"
+          },
+          {
+            "id": "risk-4",
+            "code": "RSK-004",
+            "title": "Launch Fairing Vibro-Acoustic Overload",
+            "description": "Max-Q acoustic pressure stresses sensitive optical baffles and deployable booms.",
+            "probability": 2,
+            "consequence": 5,
+            "score": 10,
+            "severity": "Moderate",
+            "mitigationStrategy": "Perform full acoustic chamber qualification and reinforce deployment latches.",
+            "mitigationCostMUsd": 10,
+            "mitigated": false,
+            "residualScore": 4,
+            "ownerRole": "Risk and Safety Officer"
+          }
+        ],
+        "gates": [
+          {
+            "code": "MCR",
+            "name": "Mission Concept Review",
+            "lifecyclePhase": "Pre-Phase A: Concept Studies",
+            "passed": false,
+            "blockedReasons": []
+          },
+          {
+            "code": "SRR",
+            "name": "System Requirements Review",
+            "lifecyclePhase": "Phase A: Concept & Tech Dev",
+            "passed": false,
+            "blockedReasons": []
+          },
+          {
+            "code": "MDR",
+            "name": "Mission Definition Review",
+            "lifecyclePhase": "Phase A: Concept & Tech Dev",
+            "passed": false,
+            "blockedReasons": []
+          },
+          {
+            "code": "PDR",
+            "name": "Preliminary Design Review",
+            "lifecyclePhase": "Phase B: Preliminary Design",
+            "passed": false,
+            "blockedReasons": []
+          },
+          {
+            "code": "CDR",
+            "name": "Critical Design Review",
+            "lifecyclePhase": "Phase C: Final Design & Fab",
+            "passed": false,
+            "blockedReasons": [
+              "2 Critical risk(s) remain unmitigated in the Risk Register.",
+              "1 Mandatory requirement(s) currently failing verification."
+            ]
+          },
+          {
+            "code": "SIR",
+            "name": "System Integration Review",
+            "lifecyclePhase": "Phase D: Assembly, Integration & Test",
+            "passed": false,
+            "blockedReasons": [
+              "2 Critical risk(s) remain unmitigated in the Risk Register.",
+              "1 Mandatory requirement(s) currently failing verification."
+            ]
+          },
+          {
+            "code": "ORR",
+            "name": "Operational Readiness Review",
+            "lifecyclePhase": "Phase D: Assembly, Integration & Test",
+            "passed": false,
+            "blockedReasons": [
+              "2 Critical risk(s) remain unmitigated in the Risk Register.",
+              "1 Mandatory requirement(s) currently failing verification."
+            ]
+          },
+          {
+            "code": "FRR",
+            "name": "Flight Readiness Review",
+            "lifecyclePhase": "Phase D: Assembly, Integration & Test",
+            "passed": false,
+            "blockedReasons": [
+              "2 Critical risk(s) remain unmitigated in the Risk Register.",
+              "1 Mandatory requirement(s) currently failing verification.",
+              "Complete prior reviews (MCR, SRR, MDR, PDR, CDR, SIR, ORR) before Flight Readiness."
+            ]
+          },
+          {
+            "code": "PLAR",
+            "name": "Post-Launch Assessment Review",
+            "lifecyclePhase": "Phase E: Operations & Sustainment",
+            "passed": false,
+            "blockedReasons": [
+              "Spacecraft must complete Launch & Cruise before Post-Launch Assessment."
+            ]
+          },
+          {
+            "code": "PFAR",
+            "name": "Post-Flight Assessment Review",
+            "lifecyclePhase": "Phase F: Closeout",
+            "passed": false,
+            "blockedReasons": [
+              "Mission closeout (End of Life) must finish before Post-Flight Assessment."
+            ]
+          }
+        ],
+        "simulation": {
+          "currentStage": "Mission Concept",
+          "stageProgressPct": 0,
+          "countdownSeconds": 10,
+          "isLaunching": false,
+          "launchSequenceStep": "Standby on Pad",
+          "missionElapsedDays": 0,
+          "fuelRemainingPct": 100,
+          "batteryChargePct": 100,
+          "commsLinkPct": 100,
+          "thermalTempC": 21,
+          "scienceCollectedPct": 0,
+          "objectivesCompleted": [],
+          "activeEvent": null,
+          "failed": false,
+          "failureReason": null,
+          "failedStage": null,
+          "completed": false,
+          "endOfLifeOption": null,
+          "logs": [
+            {
+              "id": "log-init",
+              "timestamp": "2026-11-13T14:58:08.692Z",
+              "stage": "Mission Concept",
+              "title": "Mission Baseline Initialized",
+              "detail": "Ares Horizon Orbiter baseline loaded. Review spacecraft, orbital trajectory, and systems gates before launch.",
+              "severity": "info"
+            },
+            {
+              "id": "log-1794581898275-or38p",
+              "timestamp": "2026-11-13T14:58:18.275Z",
+              "stage": "Mission Concept",
+              "category": "event",
+              "title": "3D Field Ops Deployed: Mission 4: Mars Exploration",
+              "detail": "Mode: free-explore · Environment: mars.",
+              "severity": "nominal",
+              "metricSnapshot": "MARS"
+            }
+          ]
+        },
+        "createdAt": "2026-11-13T14:58:08.692Z",
+        "updatedAt": "2026-11-13T14:58:18.279Z"
+      },
+      "sharedCompletedObjectives": [],
+      "sharedDiscoveries": [],
+      "sharedBaseModules": [],
+      "chat": [
+        {
+          "id": "msg-1794581896184",
+          "senderName": "Flight Loop",
+          "senderRole": "Mission Commander",
+          "text": "Flight Director initialized squad ORB-G732 as Mission Commander.",
+          "timestamp": "2026-11-13T14:58:16.184Z",
+          "isSystem": true
+        }
+      ],
+      "updatedAt": "2026-11-13T14:58:29.487Z"
+    },
+    "ORB-TA5X": {
+      "code": "ORB-TA5X",
+      "name": "Ares Operations Team",
+      "leaderId": "mem-1794581932258-fg4bp",
+      "members": [
+        {
+          "id": "mem-1794581932258-fg4bp",
+          "name": "Flight Director",
+          "role": "Mission Commander",
+          "isLeader": true,
+          "online": false,
+          "joinedAt": "2026-11-13T14:58:52.258Z"
+        }
+      ],
+      "mission": {
+        "id": "mission-ares-surveyor",
+        "name": "Ares Horizon Orbiter",
+        "description": "Orbital reconnaissance mission to Mars studying ancient fluvial mineralogy, subsurface water ice, and upper atmospheric escape.",
+        "category": "Planetary Exploration",
+        "destinationId": "mars",
+        "missionType": "Orbiter",
+        "difficulty": "Standard",
+        "durationDays": 720,
+        "budgetCapMUsd": 650,
+        "primaryObjective": "Characterize hydrated mineral deposits and subsurface ice sheets from 400 km Mars orbit.",
+        "secondaryObjectives": [
+          "Map Mars crustal magnetic anomalies across southern highlands",
+          "Demonstrate Ka-band high-rate deep-space telemetry downlink"
+        ],
+        "successCriteria": [
+          "Achieve Mars orbit capture within 10% of nominal 400 km altitude",
+          "Collect >= 80% science payload return across primary observation campaigns",
+          "Maintain positive power and propellant margins through End of Life disposal"
+        ],
+        "selectedPayloadIds": [
+          "pay-hirise",
+          "pay-ir-spec",
+          "pay-mag"
+        ],
+        "launchVehicleId": "lv-falcon-heavy",
+        "spacecraft": {
+          "structureId": "bus-planetary",
+          "propulsionId": "bipropellant",
+          "powerId": "solar-high-eff",
+          "solarPanelAreaM2": 18,
+          "batteryCapacityWh": 4200,
+          "propellantMassKg": 2800,
+          "commsTier": "Ka-Band Deep Space",
+          "thermalTier": "Active Louvers & Heaters",
+          "navigationTier": "Deep Space Autonomous Optical",
+          "attitudeControl": "Reaction Wheels + RCS",
+          "redundancyLevel": "Selective Redundancy"
+        },
+        "orbitalPlan": {
+          "orbitType": "Mars Orbit",
+          "departureAltitudeKm": 300,
+          "targetAltitudeKm": 400,
+          "inclinationDeg": 93,
+          "eccentricity": 0.01,
+          "aerobrakingAssisted": false,
+          "contingencyDeltaVPercent": 10
+        },
+        "requirements": [
+          {
+            "id": "req-mass",
+            "code": "SYS-MASS-01",
+            "title": "Launch Vehicle Mass Margin",
+            "description": "Spacecraft wet mass must remain within selected launch vehicle destination payload capacity.",
+            "category": "Mass",
+            "priority": "Mandatory",
+            "targetDisplay": "<= 12,500 kg",
+            "actualDisplay": "3,969 kg (+68.2%)",
+            "verificationMethod": "Analysis",
+            "status": "Passed",
+            "objectiveLink": "Characterize hydrated mineral deposits and subsurface ice sheets from 400 km Mars orbit.",
+            "manualVerified": false
+          },
+          {
+            "id": "req-power",
+            "code": "SYS-PWR-02",
+            "title": "Positive Power & Eclipse Margin",
+            "description": "Power generation at destination solar flux must exceed average bus + payload load with >= 1.2h eclipse battery.",
+            "category": "Power",
+            "priority": "Mandatory",
+            "targetDisplay": ">= 699 W & >= 1.2h",
+            "actualDisplay": "2635 W (+277%) · 6.01h",
+            "verificationMethod": "Test",
+            "status": "Passed",
+            "objectiveLink": "Characterize hydrated mineral deposits and subsurface ice sheets from 400 km Mars orbit.",
+            "manualVerified": false
+          },
+          {
+            "id": "req-deltav",
+            "code": "ORB-DV-03",
+            "title": "Mission Delta-V Capability",
+            "description": "Available Tsiolkovsky delta-v must cover transfer, capture, and contingency maneuvers.",
+            "category": "Orbital",
+            "priority": "Mandatory",
+            "targetDisplay": ">= 3.76 km/s",
+            "actualDisplay": "3.81 km/s (Margin: +0.05 km/s)",
+            "verificationMethod": "Analysis",
+            "status": "Passed",
+            "objectiveLink": "Characterize hydrated mineral deposits and subsurface ice sheets from 400 km Mars orbit.",
+            "manualVerified": false
+          },
+          {
+            "id": "req-science",
+            "code": "SCI-PAY-04",
+            "title": "Science Payload Complement",
+            "description": "Mission must carry at least 2 compatible instruments with >= 35 aggregate science value.",
+            "category": "Science",
+            "priority": "High",
+            "targetDisplay": ">= 2 instruments · >= 35 pts",
+            "actualDisplay": "3 instruments · 68 pts",
+            "verificationMethod": "Demonstration",
+            "status": "Passed",
+            "objectiveLink": "Characterize hydrated mineral deposits and subsurface ice sheets from 400 km Mars orbit.",
+            "manualVerified": false
+          },
+          {
+            "id": "req-budget",
+            "code": "MGT-BUD-05",
+            "title": "Budget Cap & Contingency",
+            "description": "Total estimated cost including risk mitigations must stay within the mission budget cap.",
+            "category": "Budget",
+            "priority": "Mandatory",
+            "targetDisplay": "<= $650M",
+            "actualDisplay": "$580.7M (10.7% reserve)",
+            "verificationMethod": "Inspection",
+            "status": "Passed",
+            "objectiveLink": "Map Mars crustal magnetic anomalies across southern highlands",
+            "manualVerified": false
+          },
+          {
+            "id": "req-safety",
+            "code": "SAF-RSK-06",
+            "title": "Critical Risk Mitigation",
+            "description": "All Critical (score >= 16) mission risks must be mitigated before Flight Readiness Review.",
+            "category": "Safety",
+            "priority": "Mandatory",
+            "targetDisplay": "0 unmitigated Critical risks",
+            "actualDisplay": "2 unmitigated Critical",
+            "verificationMethod": "Inspection",
+            "status": "Failed",
+            "objectiveLink": "Achieve Mars orbit capture within 10% of nominal 400 km altitude",
+            "manualVerified": false
+          }
+        ],
+        "risks": [
+          {
+            "id": "risk-1",
+            "code": "RSK-001",
+            "title": "Propellant Margin Depletion During Orbit Capture",
+            "description": "Navigation dispersion or finite-burn gravity losses could require additional delta-v at arrival.",
+            "probability": 4,
+            "consequence": 5,
+            "score": 20,
+            "severity": "Critical",
+            "mitigationStrategy": "Carry >= 10% delta-v propellant reserve and verify optical navigation updates prior to MOI.",
+            "mitigationCostMUsd": 12,
+            "mitigated": false,
+            "residualScore": 8,
+            "ownerRole": "Propulsion Engineer"
+          },
+          {
+            "id": "risk-2",
+            "code": "RSK-002",
+            "title": "Solar / Thermal Power Deficit in Eclipse or Low Flux",
+            "description": "Reduced irradiance at destination or dust accumulation drops array output below essential bus load.",
+            "probability": 4,
+            "consequence": 4,
+            "score": 16,
+            "severity": "Critical",
+            "mitigationStrategy": "Upgrade to triple-junction GaAs arrays or RTG and size batteries for 4+ hour eclipse survival.",
+            "mitigationCostMUsd": 16,
+            "mitigated": false,
+            "residualScore": 6,
+            "ownerRole": "Spacecraft Engineer"
+          },
+          {
+            "id": "risk-3",
+            "code": "RSK-003",
+            "title": "Deep-Space Telemetry Link Blackout",
+            "description": "High-gain antenna pointing drift or solar conjunction degrades science data downlink.",
+            "probability": 3,
+            "consequence": 3,
+            "score": 9,
+            "severity": "Moderate",
+            "mitigationStrategy": "Add Ka-band redundant transponder and autonomous safe-mode sun/Earth acquisition.",
+            "mitigationCostMUsd": 9,
+            "mitigated": false,
+            "residualScore": 4,
+            "ownerRole": "Navigation Specialist"
+          },
+          {
+            "id": "risk-4",
+            "code": "RSK-004",
+            "title": "Launch Fairing Vibro-Acoustic Overload",
+            "description": "Max-Q acoustic pressure stresses sensitive optical baffles and deployable booms.",
+            "probability": 2,
+            "consequence": 5,
+            "score": 10,
+            "severity": "Moderate",
+            "mitigationStrategy": "Perform full acoustic chamber qualification and reinforce deployment latches.",
+            "mitigationCostMUsd": 10,
+            "mitigated": false,
+            "residualScore": 4,
+            "ownerRole": "Risk and Safety Officer"
+          }
+        ],
+        "gates": [
+          {
+            "code": "MCR",
+            "name": "Mission Concept Review",
+            "lifecyclePhase": "Pre-Phase A: Concept Studies",
+            "passed": false,
+            "blockedReasons": []
+          },
+          {
+            "code": "SRR",
+            "name": "System Requirements Review",
+            "lifecyclePhase": "Phase A: Concept & Tech Dev",
+            "passed": false,
+            "blockedReasons": []
+          },
+          {
+            "code": "MDR",
+            "name": "Mission Definition Review",
+            "lifecyclePhase": "Phase A: Concept & Tech Dev",
+            "passed": false,
+            "blockedReasons": []
+          },
+          {
+            "code": "PDR",
+            "name": "Preliminary Design Review",
+            "lifecyclePhase": "Phase B: Preliminary Design",
+            "passed": false,
+            "blockedReasons": []
+          },
+          {
+            "code": "CDR",
+            "name": "Critical Design Review",
+            "lifecyclePhase": "Phase C: Final Design & Fab",
+            "passed": false,
+            "blockedReasons": [
+              "2 Critical risk(s) remain unmitigated in the Risk Register.",
+              "1 Mandatory requirement(s) currently failing verification."
+            ]
+          },
+          {
+            "code": "SIR",
+            "name": "System Integration Review",
+            "lifecyclePhase": "Phase D: Assembly, Integration & Test",
+            "passed": false,
+            "blockedReasons": [
+              "2 Critical risk(s) remain unmitigated in the Risk Register.",
+              "1 Mandatory requirement(s) currently failing verification."
+            ]
+          },
+          {
+            "code": "ORR",
+            "name": "Operational Readiness Review",
+            "lifecyclePhase": "Phase D: Assembly, Integration & Test",
+            "passed": false,
+            "blockedReasons": [
+              "2 Critical risk(s) remain unmitigated in the Risk Register.",
+              "1 Mandatory requirement(s) currently failing verification."
+            ]
+          },
+          {
+            "code": "FRR",
+            "name": "Flight Readiness Review",
+            "lifecyclePhase": "Phase D: Assembly, Integration & Test",
+            "passed": false,
+            "blockedReasons": [
+              "2 Critical risk(s) remain unmitigated in the Risk Register.",
+              "1 Mandatory requirement(s) currently failing verification.",
+              "Complete prior reviews (MCR, SRR, MDR, PDR, CDR, SIR, ORR) before Flight Readiness."
+            ]
+          },
+          {
+            "code": "PLAR",
+            "name": "Post-Launch Assessment Review",
+            "lifecyclePhase": "Phase E: Operations & Sustainment",
+            "passed": false,
+            "blockedReasons": [
+              "Spacecraft must complete Launch & Cruise before Post-Launch Assessment."
+            ]
+          },
+          {
+            "code": "PFAR",
+            "name": "Post-Flight Assessment Review",
+            "lifecyclePhase": "Phase F: Closeout",
+            "passed": false,
+            "blockedReasons": [
+              "Mission closeout (End of Life) must finish before Post-Flight Assessment."
+            ]
+          }
+        ],
+        "simulation": {
+          "currentStage": "Mission Concept",
+          "stageProgressPct": 0,
+          "countdownSeconds": 10,
+          "isLaunching": false,
+          "launchSequenceStep": "Standby on Pad",
+          "missionElapsedDays": 0,
+          "fuelRemainingPct": 100,
+          "batteryChargePct": 100,
+          "commsLinkPct": 100,
+          "thermalTempC": 21,
+          "scienceCollectedPct": 0,
+          "objectivesCompleted": [],
+          "activeEvent": null,
+          "failed": false,
+          "failureReason": null,
+          "failedStage": null,
+          "completed": false,
+          "endOfLifeOption": null,
+          "logs": [
+            {
+              "id": "log-init",
+              "timestamp": "2026-11-13T14:58:43.491Z",
+              "stage": "Mission Concept",
+              "title": "Mission Baseline Initialized",
+              "detail": "Ares Horizon Orbiter baseline loaded. Review spacecraft, orbital trajectory, and systems gates before launch.",
+              "severity": "info"
+            },
+            {
+              "id": "log-1794581934067-6pgj2",
+              "timestamp": "2026-11-13T14:58:54.067Z",
+              "stage": "Mission Concept",
+              "category": "event",
+              "title": "3D Field Ops Deployed: Mission 4: Mars Exploration",
+              "detail": "Mode: free-explore · Environment: mars.",
+              "severity": "nominal",
+              "metricSnapshot": "MARS"
+            }
+          ]
+        },
+        "createdAt": "2026-11-13T14:58:43.491Z",
+        "updatedAt": "2026-11-13T14:58:54.069Z"
+      },
+      "sharedCompletedObjectives": [],
+      "sharedDiscoveries": [],
+      "sharedBaseModules": [],
+      "chat": [
+        {
+          "id": "msg-1794581932259",
+          "senderName": "Flight Loop",
+          "senderRole": "Mission Commander",
+          "text": "Flight Director initialized squad ORB-TA5X as Mission Commander.",
+          "timestamp": "2026-11-13T14:58:52.259Z",
+          "isSystem": true
+        }
+      ],
+      "updatedAt": "2026-11-13T14:59:22.312Z"
+    }
+  },
+  "baseModules": [
+    {
+      "id": "base-solar-farm-1794581662136-zg9",
+      "type": "solar-farm",
+      "name": "Roll-Out Solar Array Farm",
+      "environment": "mars",
+      "x": 9.5,
+      "z": 9.2,
+      "massKg": 620,
+      "powerDeltaKw": 8.5,
+      "builtAt": "2026-11-13T14:54:22.136Z",
+      "integrityPct": 100
+    }
+  ],
+  "career": {
+    "xp": 61,
+    "rank": "Candidate",
+    "reputation": 56,
+    "missionsFlown": 1,
+    "discoveriesLogged": 0,
+    "skills": {
+      "piloting": 1,
+      "evaOps": 1,
+      "science": 1,
+      "engineering": 2
+    }
+  }
+}

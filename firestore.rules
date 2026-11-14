@@ -1,0 +1,105 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() > 0 && id.size() <= 64 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function isValidUser(userId) {
+      return incoming().id == userId
+        && incoming().createdAt is string
+        && incoming().updatedAt is string;
+    }
+
+    function isValidCampaign(userId) {
+      return incoming().userId == userId
+        && incoming().missionName is string
+        && incoming().score is number
+        && incoming().grade is string
+        && incoming().passed is bool;
+    }
+
+    function isValidMission(userId) {
+      return incoming().userId == userId
+        && incoming().missionId is string
+        && incoming().title is string
+        && incoming().score is number
+        && incoming().passed is bool;
+    }
+
+    function isValidSpacecraft(userId) {
+      return incoming().userId == userId
+        && incoming().name is string
+        && incoming().busType is string
+        && incoming().propulsionType is string;
+    }
+
+    function isValidAchievement(userId) {
+      return incoming().userId == userId
+        && incoming().achievementId is string
+        && incoming().unlockedAt is string;
+    }
+
+    function isValidSettings(userId) {
+      return incoming().userId == userId
+        && incoming().units is string
+        && incoming().graphicsQuality is string
+        && incoming().soundEnabled is bool;
+    }
+
+    match /users/{userId} {
+      allow get, list: if isOwner(userId);
+      allow create: if isOwner(userId) && isValidId(userId) && isValidUser(userId);
+      allow update: if isOwner(userId) && isValidId(userId) && isValidUser(userId);
+      allow delete: if isOwner(userId);
+
+      match /campaigns/{campaignId} {
+        allow get, list: if isOwner(userId);
+        allow create: if isOwner(userId) && isValidId(campaignId) && isValidCampaign(userId);
+        allow update: if isOwner(userId) && isValidId(campaignId) && isValidCampaign(userId);
+        allow delete: if isOwner(userId);
+      }
+
+      match /missions/{missionId} {
+        allow get, list: if isOwner(userId);
+        allow create: if isOwner(userId) && isValidId(missionId) && isValidMission(userId);
+        allow update: if isOwner(userId) && isValidId(missionId) && isValidMission(userId);
+        allow delete: if isOwner(userId);
+      }
+
+      match /spacecraft/{spacecraftId} {
+        allow get, list: if isOwner(userId);
+        allow create: if isOwner(userId) && isValidId(spacecraftId) && isValidSpacecraft(userId);
+        allow update: if isOwner(userId) && isValidId(spacecraftId) && isValidSpacecraft(userId);
+        allow delete: if isOwner(userId);
+      }
+
+      match /achievements/{achId} {
+        allow get, list: if isOwner(userId);
+        allow create: if isOwner(userId) && isValidId(achId) && isValidAchievement(userId);
+        allow update: if isOwner(userId) && isValidId(achId) && isValidAchievement(userId);
+        allow delete: if isOwner(userId);
+      }
+
+      match /settings/{settingsId} {
+        allow get, list: if isOwner(userId);
+        allow create: if isOwner(userId) && isValidId(settingsId) && isValidSettings(userId);
+        allow update: if isOwner(userId) && isValidId(settingsId) && isValidSettings(userId);
+        allow delete: if isOwner(userId);
+      }
+    }
+  }
+}

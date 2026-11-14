@@ -1,0 +1,1225 @@
+# MASTER DEVELOPMENT PROMPT
+# SPACE MISSION DESIGN GAME — COMPLETE 3D WEB APPLICATION
+## FULL DEVELOPMENT: PHASE 1 TO PHASE 8
+
+You are acting as a complete senior game development studio consisting of:
+
+- Principal Game Architect
+- Senior React and TypeScript Developer
+- Three.js / WebGL 3D Developer
+- Space Mission Systems Engineer
+- Orbital Mechanics Specialist
+- NASA Data Integration Engineer
+- Multiplayer Backend Engineer
+- UI/UX Designer
+- Game Designer
+- Quality Assurance Engineer
+
+Your task is to DESIGN, DEVELOP, INTEGRATE AND COMPLETE a fully playable, professional-quality 3D Space Mission Design Game.
+
+This is an educational and engineering-based space mission simulation game.
+
+IMPORTANT: Do not produce only a prototype, static dashboard, UI mockup, landing page, or incomplete demo.
+
+Build the actual working game with functional systems, interconnected gameplay, 3D visualization, engineering calculations, mission progression, multiplayer functionality and a complete user experience.
+
+Complete all EIGHT DEVELOPMENT PHASES in this single development task.
+
+Do not stop after Phase 1.
+Do not ask for permission between phases.
+Do not replace functional modules unnecessarily.
+Do not leave placeholder buttons or fake functionality.
+Do not claim a feature is complete unless it works.
+
+---
+
+# 1. PROJECT IDENTITY
+
+Project Name: SPACE MISSION DESIGN GAME
+
+Project Type: 3D Educational Space Mission Simulation and Strategy Game
+
+Platform: Web Application
+
+Primary Objective:
+
+Allow players to design, develop, simulate, launch, operate and evaluate complete space missions using real-world space science, orbital mechanics, spacecraft engineering principles and NASA-inspired systems engineering processes.
+
+The game should allow players to experience the responsibilities of an actual space mission design team.
+
+The experience should combine:
+
+1. Space exploration
+2. Mission planning
+3. Spacecraft engineering
+4. Orbital mechanics
+5. Launch vehicle selection
+6. Payload configuration
+7. Scientific objectives
+8. Budget management
+9. Mission risk management
+10. Mission simulation
+11. Multiplayer teamwork
+12. Mission success and failure analysis
+
+The game must be educational, technically meaningful, interactive and visually impressive.
+
+The final experience should feel like a combination of a professional aerospace mission control system, an interactive space simulator and a strategy game.
+
+---
+
+# 2. NON-NEGOTIABLE DEVELOPMENT RULES
+
+Follow these rules throughout development:
+
+1. Build a complete application, not just a visual prototype.
+2. Use a consistent architecture across all modules.
+3. Maintain shared TypeScript interfaces and data models.
+4. Ensure every component uses the correct store APIs.
+5. Never create duplicate stores or duplicate implementations of the same feature.
+6. Do not randomly rename files, functions, types or exports.
+7. Preserve existing working code if an existing project workspace is available.
+8. Inspect the existing project before modifying it.
+9. If a feature already exists, improve and integrate it instead of rebuilding it.
+10. Never delete working NASA integrations.
+11. All important buttons must perform real actions.
+12. All calculations must be functional.
+13. All mission changes must update the actual game state.
+14. All important data must persist appropriately.
+15. Multiplayer must synchronize actual game state, not just display fake player cards.
+16. Do not use hardcoded fake API responses and present them as live NASA data.
+17. Clearly distinguish real NASA data, curated reference data and educational approximations.
+18. Do not use paid purchases, paid upgrades or pay-to-win mechanics.
+19. Do not stop after generating code for one phase.
+20. Complete all eight phases before declaring the project complete.
+
+If the environment has limitations, implement the best functional alternative and document the limitation.
+
+---
+
+# 3. TECHNOLOGY STACK
+
+Use the following technology architecture:
+
+## Frontend
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Zustand for centralized state management
+- React Router where appropriate
+- Lucide React icons
+
+## 3D Engine
+- Three.js
+- React Three Fiber
+- Drei
+- Three.js shaders and lighting where appropriate
+
+## Backend
+- Node.js
+- Express
+- Socket.IO
+- REST APIs
+- Server-side validation
+
+## Data Management
+- Zustand persistence for client-side campaign state
+- SQLite or another suitable database for persistent accounts, squads and campaigns if supported
+- Local storage as a fallback for solo gameplay
+
+## Optional AI Integration
+- Gemini API through a secure server-side integration.
+- Never expose API keys in frontend code.
+- AI must be optional and must not be required for core gameplay.
+
+If the environment provides a different supported architecture, adapt carefully while preserving all required functionality.
+
+---
+
+# 4. GAME DESIGN AND VISUAL EXPERIENCE
+
+The game must have a premium, cinematic, futuristic aerospace interface.
+
+## Visual Direction
+
+Design language:
+
+- Deep space black and navy backgrounds
+- Blue and cyan highlights
+- Subtle violet and white lighting
+- Glass-like engineering panels
+- Professional aerospace typography
+- Animated orbital paths
+- Glowing spacecraft indicators
+- Realistic planetary textures
+- Smooth interface transitions
+- High-quality 3D scenes
+
+Avoid:
+- Generic admin dashboard appearance
+- Excessive cards everywhere
+- Unnecessary gradients
+- Random neon effects
+- Mobile-game-style cartoon graphics
+- Static screenshots pretending to be 3D environments
+
+## Main Interface
+
+Create a complete interface containing:
+
+1. Main navigation
+2. Mission Control Dashboard
+3. Mission Creation
+4. Mission Design Workspace
+5. Spacecraft Designer
+6. Payload Configuration
+7. Launch Vehicle Selection
+8. Orbital Planner
+9. Mission Simulation
+10. Engineering Console
+11. Mission Control Center
+12. Squad / Multiplayer
+13. Mission Results
+14. Campaign Progress
+15. Settings and Help
+
+Use a consistent layout and design system across every screen.
+
+The interface must be responsive for desktop and tablet, with a usable mobile fallback.
+
+---
+
+# 5. CORE GAMEPLAY
+
+The player must create and manage a complete space mission.
+
+## Mission Creation
+
+Allow the player to define:
+
+- Mission name
+- Mission description
+- Mission category
+- Destination
+- Primary objective
+- Secondary objectives
+- Mission duration
+- Mission type
+- Mission difficulty
+- Mission budget
+- Mission success criteria
+
+## Mission Categories
+
+Support:
+
+- Scientific Research
+- Planetary Exploration
+- Earth Observation
+- Communication
+- Navigation
+- Human Spaceflight
+- Astrophysics
+- Planetary Defense
+- Technology Demonstration
+- Sample Return
+
+## Mission Types
+
+Support:
+
+- Flyby
+- Orbiter
+- Lander
+- Rover
+- Sample Return
+- Space Telescope
+- Crewed Mission
+- Deep Space Probe
+- Communication Satellite
+- Earth Observation Satellite
+
+Mission type must influence the available components, engineering constraints and objectives.
+
+---
+
+# 6. SPACECRAFT DESIGN SYSTEM
+
+Build an interactive spacecraft configuration system.
+
+Players must be able to configure:
+
+## Spacecraft Structure
+- Primary structure
+- Dry mass
+- Structural mass
+- Fuel tanks
+- Propulsion system
+- Power system
+- Communication system
+- Thermal control
+- Navigation
+- Attitude control
+- Scientific instruments
+
+## Propulsion
+Support configurable propulsion options such as:
+
+- Chemical propulsion
+- Electric propulsion
+- Ion propulsion
+- Cold gas propulsion
+- Monopropellant propulsion
+- Bipropellant propulsion
+
+Each propulsion system must have appropriate educational reference parameters.
+
+## Power System
+
+Include:
+
+- Solar panels
+- Battery capacity
+- Power generation
+- Power consumption
+- Peak power
+- Average power
+- Power margin
+
+Display whether the spacecraft has sufficient power for its planned operations.
+
+## Mass Management
+
+Calculate:
+
+- Dry mass
+- Payload mass
+- Propellant mass
+- Structural mass
+- Total wet mass
+- Launch mass
+- Remaining mass margin
+
+Prevent invalid configurations when mass limits are exceeded.
+
+All changes must update the spacecraft model and mission analysis.
+
+---
+
+# 7. PAYLOAD DESIGN SYSTEM
+
+Allow players to select and configure payloads.
+
+Include examples:
+
+- Optical camera
+- Infrared camera
+- Spectrometer
+- Radar instrument
+- Magnetometer
+- Atmospheric sensor
+- Radiation detector
+- Communication payload
+- Scientific experiment
+- Sample collection system
+- Lander instruments
+- Rover scientific instruments
+- Telescope instruments
+
+Each payload must have:
+
+- Mass
+- Power consumption
+- Scientific purpose
+- Operational requirements
+- Data output
+- Destination compatibility
+- Budget cost
+
+Payload selection must affect mass, power, cost, mission capability and success criteria.
+
+---
+
+# 8. LAUNCH VEHICLE SYSTEM
+
+Create a launch vehicle selection interface.
+
+Include a curated reference catalog of real launch vehicles, such as:
+
+- Falcon 9
+- Falcon Heavy
+- Electron
+- Ariane 6
+- Vulcan Centaur
+- Atlas V
+- SLS
+- New Glenn
+- Other suitable historical or reference launch systems
+
+For each launch vehicle, include:
+
+- Payload capacity
+- Reference launch cost where reliable
+- Fairing constraints
+- Launch capabilities
+- Destination compatibility
+- Reliability assumptions
+- Source and data date
+
+Do not present outdated or uncertain prices as current verified prices.
+
+The player must select a launcher based on mission mass, destination and launch requirements.
+
+Display compatibility warnings.
+
+---
+
+# 9. ORBITAL MECHANICS AND MISSION PLANNING
+
+This is one of the most important game systems.
+
+Build a functional orbital planning engine.
+
+Include:
+
+## Orbit Types
+- Low Earth Orbit
+- Medium Earth Orbit
+- Geostationary Orbit
+- Polar Orbit
+- Sun-synchronous Orbit
+- Lunar Orbit
+- Mars Orbit
+- Heliocentric Orbit
+- Custom Orbit
+
+## Calculations
+
+Implement:
+
+- Circular orbital velocity
+- Escape velocity
+- Orbital period
+- Orbital altitude
+- Orbital inclination
+- Hohmann transfer estimates
+- Transfer time
+- Delta-v budget
+- Departure burn
+- Arrival or capture burn
+- Mission trajectory estimation
+
+Use correct units and clearly explain assumptions.
+
+For idealized orbital calculations, explicitly state that perturbations, finite burns, inclination changes and other mission-specific effects may be excluded.
+
+Never present a simplified calculation as a fully validated flight trajectory.
+
+## 3D Orbital Visualization
+
+Display:
+
+- Central celestial body
+- Orbit path
+- Spacecraft position
+- Destination planet
+- Transfer trajectory
+- Departure point
+- Arrival point
+- Orbital direction
+- Time progression
+
+Allow players to rotate, zoom, pan and inspect the scene.
+
+Add animation controls:
+
+- Play
+- Pause
+- Speed control
+- Reset
+- Timeline scrubber
+
+Changing orbital parameters must update the visualization.
+
+---
+
+# 10. REAL NASA DATA INTEGRATION
+
+NASA data must be used meaningfully.
+
+Use official sources and document the data origin.
+
+Important sources:
+
+1. NASA/JPL Horizons System
+   https://ssd.jpl.nasa.gov/horizons/
+
+2. JPL Horizons API Documentation
+   https://ssd-api.jpl.nasa.gov/doc/horizons.html
+
+3. NASA Planetary Data System
+   https://pds.nasa.gov/
+
+4. NASA NAIF / SPICE
+   https://naif.jpl.nasa.gov/naif/
+
+5. NASA Systems Engineering Handbook
+   https://www.nasa.gov/reference/systems-engineering-handbook/
+
+6. NASA Technical Reports Server
+   https://ntrs.nasa.gov/
+
+7. NASA Science
+   https://science.nasa.gov/
+
+8. NASA Launch Services Program
+   https://www.nasa.gov/launch-services-program/
+
+## Data Integration Requirements
+
+Use NASA/JPL Horizons for relevant celestial body and spacecraft ephemeris information.
+
+Where supported, retrieve:
+
+- Position vectors
+- Velocity vectors
+- Target body information
+- Observation epochs
+- Reference frame
+- Time scale
+- Units
+
+Build a parser for the Horizons API response.
+
+Do not display raw API text as the only output.
+
+Convert the response into readable ephemeris information and use it in the orbital visualization where appropriate.
+
+Use backend proxy routes for external APIs.
+
+Never expose private API credentials in frontend code.
+
+If a NASA service is unavailable:
+
+- Show a clear data-unavailable status.
+- Preserve the last valid cached result when appropriate.
+- Provide an educational reference-data fallback.
+- Clearly label the fallback as non-live data.
+
+## NASA Data Transparency
+
+Every data-driven panel must indicate:
+
+- Source
+- Data type
+- Retrieved date or reference epoch
+- Unit
+- Whether it is live, cached, curated or estimated
+
+Do not fabricate NASA data.
+
+Do not claim NASA endorsement or NASA validation of this game.
+
+---
+
+# 11. MISSION ENGINEERING AND SYSTEMS ENGINEERING
+
+Integrate NASA-inspired Systems Engineering processes into gameplay.
+
+Implement:
+
+- Mission requirements
+- Requirements traceability
+- Verification methods
+- Validation criteria
+- Mission architecture
+- Trade studies
+- Risk assessment
+- Design reviews
+- Technical performance measures
+- Mission readiness
+
+## Requirements Management
+
+Each requirement should have:
+
+- Requirement ID
+- Description
+- Category
+- Priority
+- Target value
+- Actual value
+- Verification method
+- Verification status
+- Traceability to objectives
+
+Support:
+
+- Test
+- Analysis
+- Inspection
+- Demonstration
+
+Display incomplete requirements and failed verification checks.
+
+## Trade Studies
+
+Allow comparisons between alternatives.
+
+Examples:
+
+- Propulsion system comparison
+- Payload selection
+- Launch vehicle selection
+- Power system selection
+- Spacecraft mass optimization
+- Cost versus performance
+- Mission duration versus fuel
+
+Display comparative results and explain the winning alternative.
+
+## Risk Management
+
+Implement a risk register with:
+
+- Risk ID
+- Description
+- Probability
+- Consequence
+- Risk score
+- Severity
+- Mitigation strategy
+- Residual risk
+- Risk owner
+
+Include:
+
+- Critical
+- High
+- Moderate
+- Low
+
+Risk values must affect mission readiness and success probability.
+
+## NASA-Inspired Mission Lifecycle
+
+Represent the systems engineering lifecycle through:
+
+- Pre-Phase A: Concept Studies
+- Phase A: Concept and Technology Development
+- Phase B: Preliminary Design and Technology Completion
+- Phase C: Final Design and Fabrication
+- Phase D: System Assembly, Integration and Test
+- Phase E: Operations and Sustainment
+- Phase F: Closeout
+
+Include relevant design reviews and readiness gates:
+
+- MCR
+- SRR
+- MDR
+- PDR
+- CDR
+- SIR
+- ORR
+- FRR
+- PLAR
+- PFAR
+
+These should be presented as an educational adaptation, not a claim of official NASA certification.
+
+A mission should not advance through critical gates if required reviews or checks are incomplete.
+
+---
+
+# 12. MISSION SIMULATION AND MISSION CONTROL
+
+Create a complete mission simulation.
+
+Mission stages:
+
+1. Mission Concept
+2. Mission Design
+3. Development
+4. Testing
+5. Launch
+6. Cruise
+7. Operations
+8. End of Life
+
+Each stage must have unique tasks, decisions, events and requirements.
+
+## Launch Simulation
+
+Include:
+
+- Countdown
+- Launch readiness
+- Vehicle status
+- Weather or launch constraint scenario
+- Engine ignition
+- Liftoff
+- Stage separation
+- Fairing separation where applicable
+- Orbital insertion
+- Deployment
+
+The simulation must react to the actual selected spacecraft, launcher and mission configuration.
+
+## Cruise Simulation
+
+Include:
+
+- Spacecraft telemetry
+- Trajectory progress
+- Fuel status
+- Power status
+- Communication status
+- Navigation status
+- Mission events
+- Corrective burn decisions
+
+## Operations
+
+Include:
+
+- Scientific observation
+- Payload operation
+- Data collection
+- Communication windows
+- Instrument failures
+- Power management
+- Mission adjustments
+
+## End of Life
+
+Include appropriate mission closure scenarios:
+
+- Deorbit
+- Disposal orbit
+- Controlled impact where applicable
+- Long-term orbital disposal
+- Safe shutdown
+- Scientific mission closeout
+
+Mission decisions must influence actual mission results.
+
+---
+
+# 13. MISSION FAILURE AND RECOVERY
+
+Failure must be a meaningful gameplay mechanic.
+
+Possible failures:
+
+- Insufficient launch capacity
+- Incorrect orbital parameters
+- Propellant shortage
+- Power failure
+- Communication loss
+- Navigation errors
+- Structural problems
+- Thermal issues
+- Payload malfunction
+- Budget overrun
+- Missed mission objectives
+- Failed critical reviews
+
+Implement two recovery mechanisms:
+
+## Retry
+Allow retrying an individual mission event or recoverable failure.
+
+## Full Restart
+Allow restarting the entire campaign when the failure is severe or the player chooses to restart.
+
+Preserve appropriate mission history and explain the reason for failure.
+
+Do not automatically declare mission success when the player completes the last stage.
+
+Evaluate the actual success criteria.
+
+---
+
+# 14. GAME ECONOMY AND PROGRESSION
+
+The game must be completely free.
+
+NON-NEGOTIABLE:
+
+- No paid purchases
+- No paid gameplay advantages
+- No premium upgrades
+- No pay-to-win mechanics
+- No paid mission unlocks
+
+Use an educational mission budget system.
+
+Players must manage:
+
+- Mission budget
+- Development cost
+- Launch cost
+- Spacecraft cost
+- Payload cost
+- Operations cost
+- Contingency reserves
+
+Use mission score and achievements for progression.
+
+Reward players for:
+
+- Efficient design
+- Low risk
+- Scientific objectives
+- Requirements completion
+- Budget discipline
+- Successful verification
+- Responsible mission planning
+
+Do not reward reckless decisions simply for being cheaper.
+
+---
+
+# 15. MULTIPLAYER AND SQUAD SYSTEM
+
+Implement real multiplayer using Socket.IO or an equivalent working real-time system.
+
+## Squad Creation
+
+Players can:
+
+- Create a squad
+- Join using a room code
+- Leave a squad
+- Invite teammates
+- View squad members
+- See online/offline status
+
+## Squad Leadership
+
+The player who creates or hosts the squad automatically becomes the leader.
+
+The leader can:
+
+- Start the mission
+- Select mission objectives
+- Manage mission progression
+- Approve shared decisions
+- Control mission stages
+
+Other members can participate according to assigned roles.
+
+## Suggested Team Roles
+
+- Mission Commander
+- Mission Designer
+- Spacecraft Engineer
+- Propulsion Engineer
+- Payload Scientist
+- Navigation Specialist
+- Risk and Safety Officer
+
+Allow role assignment and role-based permissions.
+
+## Synchronization
+
+Synchronize:
+
+- Mission state
+- Squad members
+- Mission configuration
+- Engineering decisions
+- Mission progression
+- Simulation events
+- Mission results
+
+Implement reconnection handling and server-side validation.
+
+Prevent clients from independently overwriting authoritative mission state.
+
+If multiplayer is unavailable in the deployment environment, ensure solo mode remains fully functional and provide a clearly explained multiplayer configuration path.
+
+---
+
+# 16. PHASE-BY-PHASE DEVELOPMENT PLAN
+
+Complete all eight phases in this one development task.
+
+These are DEVELOPMENT phases, separate from the in-game mission lifecycle.
+
+## PHASE 1 — FOUNDATION AND ARCHITECTURE
+
+Build:
+
+- Project architecture
+- React and TypeScript foundation
+- Routing
+- Shared UI components
+- Design system
+- Central Zustand store
+- Shared interfaces
+- Backend architecture
+- API service layer
+- Persistence layer
+- Error handling
+
+Deliverable:
+A stable application foundation with consistent types, stores and APIs.
+
+## PHASE 2 — COMPLETE UI/UX
+
+Build:
+
+- Main menu
+- Dashboard
+- Mission creation
+- Mission design workspace
+- Spacecraft designer
+- Payload configuration
+- Launcher selection
+- Orbital planner
+- Engineering console
+- Mission control
+- Multiplayer lobby
+- Results screen
+- Settings
+
+Deliverable:
+A complete, consistent and interactive application interface.
+
+## PHASE 3 — CORE GAME SYSTEMS
+
+Build:
+
+- Mission creation logic
+- Mission configuration
+- Spacecraft configuration
+- Payload management
+- Launcher compatibility
+- Mass calculations
+- Power calculations
+- Propulsion configuration
+- Budget management
+
+Deliverable:
+A working mission design system.
+
+## PHASE 4 — 3D SPACE ENVIRONMENT
+
+Build:
+
+- 3D solar system
+- Planet models
+- Planetary textures
+- Spacecraft model
+- Orbital paths
+- Transfer trajectories
+- Camera controls
+- Time simulation
+- Spacecraft animation
+- 3D mission inspection
+
+Deliverable:
+A real interactive 3D space environment, not a static image.
+
+## PHASE 5 — ORBITAL MECHANICS AND NASA DATA
+
+Build:
+
+- Orbital calculations
+- Delta-v estimation
+- Hohmann transfer estimates
+- Ephemeris parser
+- JPL Horizons integration
+- NASA source metadata
+- Reference-data fallback
+- Data caching
+- Visualization integration
+
+Deliverable:
+A functional engineering and NASA data integration system.
+
+## PHASE 6 — MISSION ENGINEERING AND GAMEPLAY
+
+Build:
+
+- Requirements management
+- Verification
+- Traceability
+- Trade studies
+- Risk register
+- Design reviews
+- Mission lifecycle
+- Launch simulation
+- Cruise simulation
+- Operations
+- End-of-life scenarios
+- Mission scoring
+- Mission failure
+- Retry and full restart
+
+Deliverable:
+A fully playable mission progression system.
+
+## PHASE 7 — MULTIPLAYER AND CAMPAIGN
+
+Build:
+
+- Squad creation
+- Room codes
+- Host leadership
+- Team roles
+- Real-time synchronization
+- Shared mission configuration
+- Mission progression
+- Persistent campaign
+- Achievements
+- Scoreboard
+
+Deliverable:
+A functioning squad-based multiplayer game with solo fallback.
+
+## PHASE 8 — INTEGRATION, TESTING AND FINALIZATION
+
+Complete:
+
+- TypeScript checks
+- Production build
+- API integration
+- Store integration
+- Component integration
+- 3D performance optimization
+- Multiplayer validation
+- Persistence testing
+- Error handling
+- Responsive layout
+- Accessibility basics
+- User documentation
+- Setup instructions
+- Environment variable documentation
+- Final project audit
+
+Fix all known build and integration errors.
+
+Remove unused files, dead code and duplicate implementations where safe.
+
+Deliverable:
+A complete, integrated, runnable and documented game.
+
+---
+
+# 17. 3D QUALITY REQUIREMENTS
+
+3D is a core requirement, not an optional visual enhancement.
+
+The player must be able to interact with a realistic 3D environment.
+
+Include:
+
+- High-quality planetary materials
+- Atmosphere effects where appropriate
+- Directional lighting
+- Starfield
+- Orbit rings
+- Spacecraft models
+- Animated trajectories
+- Camera orbit controls
+- Smooth zoom
+- Hover inspection
+- Selected-object details
+- Mission timeline
+
+Use procedural geometry or suitable original/appropriately licensed assets when external models are unavailable.
+
+Optimize for performance.
+
+Use level-of-detail techniques and efficient rendering where appropriate.
+
+The 3D environment must remain usable on ordinary desktop hardware.
+
+Do not make the entire game a flat dashboard with one decorative 3D canvas.
+
+---
+
+# 18. GAMEPLAY QUALITY REQUIREMENTS
+
+A player must be able to complete this entire example mission:
+
+1. Create a Mars exploration mission.
+2. Choose a scientific objective.
+3. Select a rover or orbiter mission type.
+4. Configure spacecraft structure.
+5. Select scientific payloads.
+6. Configure power and propulsion.
+7. Choose a launch vehicle.
+8. Calculate spacecraft mass.
+9. Select a transfer orbit.
+10. Review delta-v and mission duration estimates.
+11. Evaluate budget.
+12. Review engineering requirements.
+13. Resolve critical risks.
+14. Pass design and readiness gates.
+15. Launch the spacecraft.
+16. Observe the spacecraft trajectory in 3D.
+17. Progress through cruise and mission operations.
+18. Complete scientific objectives.
+19. Evaluate final mission performance.
+20. Receive a mission report and score.
+
+All stages must be interconnected.
+
+If the player changes the spacecraft mass, the mission analysis must update.
+
+If the player changes the launcher, compatibility must update.
+
+If the player changes the destination, orbital planning must update.
+
+If the player changes power consumption, power margin must update.
+
+If the player ignores critical risks, the mission must reflect that decision.
+
+---
+
+# 19. DATA ACCURACY AND SCIENTIFIC INTEGRITY
+
+Use SI units consistently wherever practical.
+
+Clearly distinguish:
+
+- Measured data
+- Published reference values
+- Curated educational values
+- Calculated estimates
+- Simulated values
+
+Include references for important engineering parameters.
+
+Do not invent NASA mission results, API responses, spacecraft performance or launch vehicle specifications.
+
+Where precise physics is beyond the scope of the educational simulator, disclose the simplification.
+
+The game is an educational simulator and must not be presented as certified flight-planning software.
+
+---
+
+# 20. FINAL ACCEPTANCE CHECKLIST
+
+Before declaring completion, verify all of the following:
+
+[ ] Application starts successfully.
+
+[ ] Production build succeeds.
+
+[ ] No unresolved TypeScript errors.
+
+[ ] Main menu works.
+
+[ ] Mission creation works.
+
+[ ] Mission configuration works.
+
+[ ] Spacecraft design works.
+
+[ ] Payload selection works.
+
+[ ] Launcher selection works.
+
+[ ] Mass calculations work.
+
+[ ] Power calculations work.
+
+[ ] Budget calculations work.
+
+[ ] Orbital calculations work.
+
+[ ] 3D environment renders.
+
+[ ] Orbital trajectory updates.
+
+[ ] NASA data integration works where service access is available.
+
+[ ] NASA data source labels are accurate.
+
+[ ] Requirements system works.
+
+[ ] Risk system works.
+
+[ ] Trade studies work.
+
+[ ] Lifecycle reviews work.
+
+[ ] Launch simulation works.
+
+[ ] Mission progression works.
+
+[ ] Failure and recovery work.
+
+[ ] Mission scoring works.
+
+[ ] Campaign persistence works.
+
+[ ] Squad creation works.
+
+[ ] Multiplayer synchronization works where configured.
+
+[ ] Solo mode works independently.
+
+[ ] No paid gameplay mechanics exist.
+
+[ ] No fake functional buttons remain.
+
+[ ] No critical unfinished placeholders remain.
+
+[ ] Setup and run instructions are documented.
+
+If a requirement cannot be completed due to a platform limitation, identify the exact limitation and provide the working alternative. Never falsely mark it as complete.
+
+---
+
+# 21. FINAL EXECUTION INSTRUCTIONS
+
+START DEVELOPMENT NOW.
+
+First inspect the current project workspace and its existing files.
+
+If an existing implementation is present, preserve its working architecture, existing APIs, working NASA integration and previously implemented features.
+
+If the workspace is empty, create the complete application using the architecture specified above.
+
+Then execute:
+
+PHASE 1 → PHASE 2 → PHASE 3 → PHASE 4 → PHASE 5 → PHASE 6 → PHASE 7 → PHASE 8.
+
+Do not stop after describing what you intend to do.
+
+Do not merely generate a development plan.
+
+Do not provide only code snippets.
+
+Actually create and integrate the project files.
+
+Do not ask me to manually create dozens of files.
+
+Do not repeatedly ask me for approval.
+
+Do not finish with a list of features that you have not implemented.
+
+Use sensible engineering defaults when minor details are unspecified.
+
+Prioritize a fully working, integrated game over unnecessary complexity.
+
+At the end, provide:
+
+1. Complete project file structure.
+2. All implemented features.
+3. Exact setup commands.
+4. Required environment variables.
+5. How to run frontend and backend.
+6. How to test multiplayer.
+7. Build status.
+8. Known limitations, if any.
+9. A final feature-completion report.
+
+**FINAL GOAL: DELIVER A COMPLETE, PROFESSIONAL, INTERACTIVE 3D SPACE MISSION DESIGN GAME — NOT A PROTOTYPE, NOT A STATIC DASHBOARD, AND NOT AN INCOMPLETE DEMO.**

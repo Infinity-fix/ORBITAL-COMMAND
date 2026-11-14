@@ -1,0 +1,1678 @@
+# ORBITAL COMMAND
+# PHASE 2.3 — NASA SPACE MISSION ENGINEERING FRAMEWORK
+## COMPLETE RESOURCE INTEGRATION, ENGINEERING SIMULATION & EDUCATIONAL GAMEPLAY IMPLEMENTATION
+
+You are continuing development of the EXISTING ORBITAL COMMAND project.
+
+Project identity:
+
+ORBITAL COMMAND — SPACE MISSION DESIGN STUDIO
+
+Your task is to integrate the six previously supplied NASA, JPL and Canadian Space Agency resources into the existing application.
+
+This is a real implementation task.
+
+Do not simply create informational pages explaining these resources.
+
+Implement their engineering principles, scientific methods, assessment frameworks, calculations, visualization concepts and educational workflows as functional game systems.
+
+The objective is to transform ORBITAL COMMAND into a comprehensive educational space mission design and simulation platform.
+
+==================================================
+PART 1 — NON-DESTRUCTIVE IMPLEMENTATION RULES
+==================================================
+
+Before implementation, inspect the complete existing source code.
+
+Identify:
+
+- Current application architecture.
+- Existing mission design system.
+- Existing spacecraft configuration.
+- Existing orbital mechanics engine.
+- Existing trajectory calculations.
+- Existing systems engineering module.
+- Existing mission lifecycle.
+- Existing mission results.
+- Existing campaign progression.
+- Existing multiplayer architecture.
+- Existing 3D visualization.
+- Existing data persistence.
+- Existing NASA/JPL Horizons integration.
+- Existing backend services.
+
+STRICT REQUIREMENTS:
+
+1. Do not recreate the application.
+2. Do not restart previous development phases.
+3. Do not overwrite completed components unnecessarily.
+4. Do not delete existing functionality.
+5. Do not replace existing working calculations.
+6. Do not create duplicate mission systems.
+7. Do not replace the existing 3D engine.
+8. Do not replace real data with hardcoded mock values.
+9. Do not remove existing tests.
+10. Do not break existing APIs.
+11. Do not break multiplayer.
+12. Do not introduce incompatible dependencies without justification.
+
+The existing project is the foundation.
+
+Create new isolated modules and integrate them through existing architecture.
+
+If modifications are necessary, make the smallest compatible changes.
+
+Create a backup or version-control checkpoint before significant modifications.
+
+==================================================
+PART 2 — RESOURCE 001
+NASA: DESIGN AND DEVELOP SCIENCE MISSIONS
+==================================================
+
+RESOURCE:
+
+NASA — Design and Develop Science Missions.
+
+Resource date:
+26 March 2025.
+
+Instructor:
+Julie Levri.
+
+CORE ENGINEERING REFERENCES:
+
+- NASA Systems Engineering Handbook.
+- NPR 7123.1 — NASA Systems Engineering Processes and Requirements.
+- NPR 7120.5E — NASA Space Flight Program and Project Management Requirements.
+- NPR 7120.8 — NASA Research and Technology Program and Project Management Requirements.
+- NPR 8705.4 — Risk Classification for NASA Payloads.
+- NASA SMD Learn.
+- NASA Technical Reports Server reference NTRS 20210021839.
+
+PRIMARY OBJECTIVE:
+
+Implement a structured science mission development lifecycle.
+
+A. MISSION CONCEPT DEVELOPMENT
+
+Allow players to define:
+
+- Scientific problem.
+- Mission motivation.
+- Scientific questions.
+- Exploration goals.
+- Mission objectives.
+- Primary objectives.
+- Secondary objectives.
+- Expected scientific contribution.
+- Target celestial body.
+- Mission constraints.
+
+B. SCIENCE TRACEABILITY
+
+Create a traceability system connecting:
+
+Scientific Question
+→ Science Objective
+→ Measurement Requirement
+→ Instrument Selection
+→ Spacecraft Subsystem
+→ Mission Operation
+→ Verification
+→ Science Result.
+
+Every major scientific objective must have a corresponding measurable requirement.
+
+C. MISSION CLASSIFICATION
+
+Support:
+
+- Flyby.
+- Orbiter.
+- Lander.
+- Rover.
+- Sample Return.
+- Telescope.
+- Crewed Mission.
+
+Allow hybrid mission architectures where technically appropriate.
+
+D. MISSION SEGMENTS
+
+Implement the following architecture:
+
+1. Space Segment.
+2. Ground Segment.
+3. Launch Segment.
+4. User Segment.
+
+Allow players to configure and analyze the relationship between these segments.
+
+E. MISSION LIFECYCLE
+
+Implement a complete mission lifecycle:
+
+1. Pre-Phase A — Concept Studies.
+2. Phase A — Concept and Technology Development.
+3. Phase B — Preliminary Design and Technology Completion.
+4. Phase C — Final Design and Fabrication.
+5. Phase D — System Assembly, Integration and Test, Launch.
+6. Phase E — Operations and Sustainment.
+7. Phase F — Closeout.
+
+Each phase must have:
+
+- Objectives.
+- Required engineering activities.
+- Deliverables.
+- Dependencies.
+- Review gates.
+- Completion criteria.
+- Risk conditions.
+
+F. ENGINEERING REVIEWS
+
+Implement review checkpoints based on relevant NASA lifecycle practices.
+
+Include:
+
+- Mission Concept Review (MCR).
+- System Requirements Review (SRR).
+- System Definition Review (SDR).
+- Preliminary Design Review (PDR).
+- Critical Design Review (CDR).
+- System Integration Review (SIR).
+- Operational Readiness Review (ORR).
+- Flight Readiness Review (FRR).
+- Post-Launch Assessment Review (PLAR).
+- Critical events and end-of-mission reviews where appropriate.
+
+These are lifecycle-inspired review workflows, not a claim that every NASA project follows an identical review sequence.
+
+G. REQUIREMENTS ENGINEERING
+
+Create a complete requirements manager.
+
+Players must be able to:
+
+- Create requirements.
+- Assign requirement IDs.
+- Define requirement descriptions.
+- Assign priority.
+- Set measurable acceptance criteria.
+- Assign responsible subsystem.
+- Link parent requirements.
+- Link verification methods.
+- Track verification status.
+- Identify incomplete requirements.
+- Identify conflicting requirements.
+- Track requirement changes.
+
+Support verification methods:
+
+- Inspection.
+- Analysis.
+- Demonstration.
+- Test.
+
+Create bidirectional traceability.
+
+H. VERIFICATION AND VALIDATION
+
+Implement:
+
+Verification:
+Did the system meet its specified requirements?
+
+Validation:
+Does the system satisfy the mission objectives and intended use?
+
+Create verification matrices and validation reports.
+
+Do not mark a requirement verified without evidence.
+
+==================================================
+PART 3 — RESOURCE 002
+NASA GENERAL MISSION ANALYSIS TOOL — GMAT R2026a
+==================================================
+
+RESOURCE:
+
+NASA General Mission Analysis Tool.
+
+Version reference:
+GMAT R2026a.
+
+Official resource:
+https://software.nasa.gov/software/GSC-17177-1
+
+Official project:
+https://gmat.atlassian.net/
+
+CORE OBJECTIVE:
+
+Integrate GMAT-inspired mission analysis capabilities into the existing Orbital Planner.
+
+Do not claim that the application contains the complete GMAT software.
+
+Implement compatible educational and engineering simulation capabilities using the existing project's technology.
+
+A. SPACECRAFT MISSION MODEL
+
+Allow players to define:
+
+- Spacecraft name.
+- Spacecraft mass.
+- Initial position.
+- Initial velocity.
+- Orbit type.
+- Coordinate system.
+- Epoch.
+- Propagation model.
+- Available propulsion.
+- Fuel mass.
+- Maneuver configuration.
+
+B. CELESTIAL BODIES
+
+Support configurable celestial bodies.
+
+Use authoritative physical constants with source references.
+
+Include relevant properties:
+
+- Gravitational parameter.
+- Mean radius.
+- Mass where available.
+- Rotation period.
+- Orbital parameters.
+- Reference frame.
+
+Do not mix units.
+
+C. ORBIT PROPAGATION
+
+Implement educational two-body orbital propagation first.
+
+Where the existing architecture permits, extend to:
+
+- Two-body propagation.
+- Central-body gravity.
+- Perturbation models.
+- Third-body effects.
+- Atmospheric drag where applicable.
+- Solar radiation pressure where applicable.
+
+Clearly distinguish the mathematical model being used.
+
+D. ORBIT CONFIGURATION
+
+Support:
+
+- Circular orbit.
+- Elliptical orbit.
+- Polar orbit.
+- Equatorial orbit.
+- Inclined orbit.
+- Geostationary orbit.
+- Escape trajectory.
+- Hyperbolic trajectory.
+
+Allow configuration of:
+
+- Semi-major axis.
+- Eccentricity.
+- Inclination.
+- RAAN.
+- Argument of periapsis.
+- True anomaly.
+- Epoch.
+
+E. MANEUVER DESIGN
+
+Implement:
+
+- Impulsive maneuver.
+- Prograde maneuver.
+- Retrograde maneuver.
+- Normal maneuver.
+- Anti-normal maneuver.
+- Radial maneuver.
+- Multi-maneuver mission sequence.
+- Delta-V calculation.
+- Propellant estimation.
+
+Connect maneuver execution to the existing spacecraft state.
+
+F. TRANSFER ANALYSIS
+
+Implement educational mission transfer calculations:
+
+- Hohmann transfer.
+- Transfer orbit.
+- Transfer duration.
+- Departure velocity.
+- Arrival velocity.
+- Injection Delta-V.
+- Capture Delta-V.
+- Total mission Delta-V.
+
+Start with idealized coplanar circular two-body assumptions.
+
+Do not present these simplified calculations as high-fidelity operational trajectory solutions.
+
+G. ORBIT DETERMINATION
+
+Where feasible, create educational implementations of:
+
+- Observation data ingestion.
+- State estimation.
+- Batch least-squares estimation.
+- Extended Kalman Filter concept.
+- Measurement residuals.
+- State uncertainty.
+
+Use simulated observations when real observation data is unavailable.
+
+Clearly label simulated observations.
+
+H. TRAJECTORY OPTIMIZATION
+
+Create an optimization workspace.
+
+Allow players to compare:
+
+- Departure time.
+- Arrival time.
+- Transfer duration.
+- Delta-V.
+- Propellant.
+- Mission duration.
+- Trajectory constraints.
+
+Use documented numerical optimization methods where implemented.
+
+Report convergence status and assumptions.
+
+I. MISSION SEQUENCE EDITOR
+
+Create a timeline-based mission sequence editor.
+
+Allow players to arrange:
+
+- Initial conditions.
+- Orbit propagation.
+- Maneuvers.
+- Observation events.
+- Trajectory checkpoints.
+- Arrival conditions.
+- End-of-mission events.
+
+Support execution, pause, reset and result inspection.
+
+J. ANALYSIS OUTPUT
+
+Display:
+
+- Position vectors.
+- Velocity vectors.
+- Orbital elements.
+- Delta-V.
+- Fuel consumption.
+- Transfer time.
+- Orbit visualization.
+- Maneuver timeline.
+- Model assumptions.
+- Numerical warnings.
+
+K. GMAT-STYLE WORKSPACE
+
+Create an engineering workspace with:
+
+- Mission tree.
+- Spacecraft configuration.
+- Celestial body selection.
+- Force model configuration.
+- Propagator configuration.
+- Maneuver editor.
+- Mission sequence.
+- Results panel.
+
+Use the existing 3D solar system.
+
+Do not replace it.
+
+==================================================
+PART 4 — RESOURCE 003
+JPL CONCEPT MATURITY LEVELS (CML)
+==================================================
+
+RESOURCE:
+
+Space Mission Concept Development Using Concept Maturity Levels.
+
+Authors:
+
+- Wessen.
+- Borden.
+- Ziemer.
+- Kwok.
+
+Year:
+2013.
+
+CORE OBJECTIVE:
+
+Implement a mission maturity assessment system inspired by JPL Concept Maturity Levels.
+
+A. CML FRAMEWORK
+
+Implement nine concept maturity levels.
+
+Use the following progression as an educational interpretation of the CML approach:
+
+CML 1:
+Initial mission concept and problem understanding.
+
+CML 2:
+Mission concept definition and initial feasibility.
+
+CML 3:
+Preliminary mission architecture and concept assessment.
+
+CML 4:
+Mission concept and major technical elements matured.
+
+CML 5:
+Subsystem architecture and key technologies assessed.
+
+CML 6:
+System-level design and technical feasibility developed.
+
+CML 7:
+Design maturity and implementation readiness.
+
+CML 8:
+System integration and verification readiness.
+
+CML 9:
+Mission implementation readiness and operational maturity.
+
+IMPORTANT:
+
+Do not assume these descriptions are an exact reproduction of every original CML checklist.
+
+Inspect the original paper and its maturity matrices before implementing formal assessment criteria.
+
+B. MATURITY ASSESSMENT DIMENSIONS
+
+Create assessment categories:
+
+1. Science.
+2. Technical.
+3. Management.
+4. Cost.
+5. Mission Architecture.
+6. Technology Readiness.
+7. Risk.
+8. Schedule.
+9. Operations.
+
+C. MATURITY MATRIX
+
+Each assessment must include:
+
+- Assessment question.
+- Evidence required.
+- Current status.
+- Reviewer.
+- Assessment date.
+- Identified gaps.
+- Corrective action.
+- Approval status.
+
+D. MATURITY SCORING
+
+Create a transparent assessment mechanism.
+
+Do not simply average arbitrary percentages to determine CML.
+
+Each level must have required evidence and maturity criteria.
+
+A mission cannot advance merely because the player clicks an approval button.
+
+E. CML DASHBOARD
+
+Display:
+
+- Current maturity level.
+- Required next level.
+- Completed assessments.
+- Missing evidence.
+- Critical technical gaps.
+- Unresolved risks.
+- Management concerns.
+- Cost uncertainty.
+- Approval history.
+
+F. MATURITY GATES
+
+Allow mission progression only when mandatory assessment criteria are satisfied.
+
+Provide a clear explanation when a gate is blocked.
+
+G. REVIEW BOARD
+
+Create review roles:
+
+- Science Reviewer.
+- Systems Engineering Reviewer.
+- Technical Reviewer.
+- Program Manager.
+- Cost Analyst.
+- Mission Director.
+
+Use existing squad role permissions where possible.
+
+H. MATURITY HISTORY
+
+Track:
+
+- Previous maturity level.
+- New maturity level.
+- Approval decisions.
+- Evidence.
+- Review comments.
+- Corrective actions.
+
+Do not automatically advance CML based only on campaign progression.
+
+==================================================
+PART 5 — RESOURCE 004
+NASA GODDARD MISSION DESIGN LAB (MDL)
+==================================================
+
+RESOURCE:
+
+NASA Goddard Space Flight Center — Mission Design Lab.
+
+CORE PURPOSE:
+
+Translate NASA MDL's collaborative mission-concept engineering process into an interactive Mission Design Workspace.
+
+Implement the following workflows.
+
+A. OFFICE HOURS
+
+Approximate reference duration:
+One-hour concept discussion.
+
+Gameplay workflow:
+
+1. Select a mission concept.
+2. Identify the main engineering question.
+3. Identify technical challenges.
+4. Identify major constraints.
+5. Identify tall poles.
+6. Generate preliminary trade-study questions.
+7. Define next engineering actions.
+
+B. CONCEPT DEVELOPMENT
+
+Reference format:
+Several half-day engineering sessions.
+
+Gameplay workflow:
+
+1. Define science objectives.
+2. Develop mission architecture.
+3. Identify spacecraft requirements.
+4. Select potential instruments.
+5. Evaluate mission feasibility.
+6. Identify technical risks.
+7. Develop mission concept alternatives.
+8. Prepare preliminary mission documentation.
+
+C. TAILORED TRADE STUDY
+
+Allow players to select a specific engineering question.
+
+Examples:
+
+- Which orbit is better?
+- Which launch vehicle is suitable?
+- Which propulsion system should be selected?
+- Which spacecraft architecture has lower risk?
+- Which payload provides better scientific value?
+- Which design satisfies mass constraints?
+- Which design has better power margin?
+
+Generate a comparison matrix using actual mission parameters.
+
+D. POINT DESIGN STUDY
+
+Create a detailed point-design workflow.
+
+Allow configuration of:
+
+- Spacecraft architecture.
+- Spacecraft subsystems.
+- Payload.
+- Launch vehicle.
+- Orbit.
+- Ground segment.
+- Mission duration.
+- Operations concept.
+- End-of-mission strategy.
+
+E. ENGINEERING DISCIPLINES
+
+Support interconnected analysis:
+
+1. Mission Architecture.
+2. Flight Dynamics.
+3. Propulsion.
+4. Power.
+5. Thermal.
+6. Communications.
+7. Structures and Mechanisms.
+8. Attitude Determination and Control.
+9. Guidance, Navigation and Control.
+10. Science Instruments.
+11. Ground Systems.
+12. Operations.
+13. Reliability and Risk.
+14. Cost and Schedule.
+
+F. MISSION EQUIPMENT LIST (MEL)
+
+Create a spacecraft equipment database.
+
+Each equipment item must include:
+
+- Component name.
+- Subsystem.
+- Mass.
+- Power consumption.
+- Dimensions where available.
+- Data interface.
+- Thermal considerations.
+- Reliability considerations.
+- Source or model provenance.
+
+Allow players to add or remove components.
+
+Automatically update relevant engineering budgets.
+
+G. CAD / CONFIGURATION SUPPORT
+
+If existing 3D spacecraft construction supports it:
+
+- Connect subsystem selection to spacecraft visualization.
+- Update equipment placement.
+- Reflect configuration changes.
+- Show selected subsystem details.
+
+Do not create a fake CAD editor if the existing geometry system does not support it.
+
+H. TRADE STUDY REPORT
+
+Generate:
+
+- Problem statement.
+- Design alternatives.
+- Assumptions.
+- Evaluation criteria.
+- Quantitative comparisons.
+- Risks.
+- Selected alternative.
+- Reasons for selection.
+- Remaining uncertainties.
+
+==================================================
+PART 6 — RESOURCE 005
+NASA MISSION-VIZ
+==================================================
+
+RESOURCE:
+
+NASA Mission-Viz.
+
+Official repository:
+
+https://github.com/nasa/mission-viz
+
+PRIMARY OBJECTIVE:
+
+Study and implement relevant visualization concepts from NASA Mission-Viz within the existing 3D architecture.
+
+Do not blindly copy the repository or assume all its applications are production-ready.
+
+Inspect its source, documentation and license before reusing any code.
+
+A. ORRERY VISUALIZATION
+
+Improve the existing solar system visualization.
+
+Support:
+
+- Planetary positions.
+- Orbital paths.
+- Celestial body selection.
+- Time-based position changes.
+- Planet information.
+- Mission trajectory overlays.
+
+B. EARTH-MOON SYSTEM
+
+Create an educational Earth-Moon visualization.
+
+Display:
+
+- Earth.
+- Moon.
+- Relative positions.
+- Orbital path.
+- Orbital period.
+- Earth-Moon distance.
+- Mission trajectories.
+
+Use correct physical scaling where possible.
+
+If visual scaling is adjusted for readability, explicitly label it.
+
+C. HAZARDOUS ASTEROID VISUALIZATION
+
+Create an educational asteroid mission visualization.
+
+Support:
+
+- Asteroid selection.
+- Orbit visualization.
+- Earth-relative position.
+- Approach trajectory.
+- Observation points.
+- Mission targeting concepts.
+
+Use actual ephemeris data when available.
+
+Never generate fake impact predictions.
+
+D. ELLIPTICAL ORBIT VISUALIZATION
+
+Implement:
+
+- Periapsis.
+- Apoapsis.
+- Eccentricity.
+- Semi-major axis.
+- Orbital plane.
+- True anomaly.
+- Orbital motion.
+
+Connect it to the orbital mechanics engine.
+
+E. ORBIT PROPAGATOR TUTORIALS
+
+Create educational interactive demonstrations explaining:
+
+- Initial state.
+- Gravitational parameters.
+- Numerical integration.
+- Propagation time.
+- Resulting orbital trajectory.
+
+F. DATA ARCHITECTURE
+
+Study Mission-Viz's use of structured data and ontology concepts.
+
+Where useful, introduce structured mission metadata using JSON or JSON-LD.
+
+Do not force ontology complexity into unrelated components.
+
+G. 3D INTEGRATION
+
+Preserve:
+
+- Three.js.
+- React Three Fiber.
+- Existing solar system.
+- Existing spacecraft model.
+- Existing orbital visualization.
+
+Improve data flow and visualization accuracy without replacing existing components.
+
+==================================================
+PART 7 — RESOURCE 006
+CANADIAN SPACE AGENCY
+DIGITAL GAMES AND ACTIVITIES
+==================================================
+
+RESOURCE:
+
+Canadian Space Agency — Digital Games and Activities.
+
+CORE PURPOSE:
+
+Use educational game-design principles to improve ORBITAL COMMAND's learning experience.
+
+Do not copy copyrighted game assets, graphics or text.
+
+A. EDUCATIONAL GAMEPLAY
+
+Connect engineering activities with mission objectives.
+
+Examples:
+
+- Design a lunar orbiter.
+- Plan a Mars rover mission.
+- Select a spacecraft payload.
+- Build a communication network.
+- Optimize an asteroid observation mission.
+- Design an Earth observation mission.
+
+B. LEARNING OBJECTIVES
+
+Every major activity should teach at least one space engineering concept.
+
+C. INTERACTIVE CHALLENGES
+
+Create challenges with:
+
+- Mission briefing.
+- Learning objectives.
+- Starting conditions.
+- Available resources.
+- Constraints.
+- Player decisions.
+- Mission evaluation.
+- Scientific explanation.
+
+D. PROGRESSIVE DIFFICULTY
+
+Provide:
+
+Beginner:
+Basic mission types, spacecraft components and orbit concepts.
+
+Intermediate:
+Requirements, mass budgets, power budgets, orbital transfers and subsystem trade-offs.
+
+Advanced:
+Mission architecture, trajectory optimization, CML assessments, risk analysis and mission lifecycle management.
+
+E. LEARNING FEEDBACK
+
+After every important mission decision:
+
+- Explain what happened.
+- Explain the engineering reason.
+- Show the effect on mission performance.
+- Identify incorrect assumptions.
+- Suggest possible improvements.
+
+F. EDUCATIONAL CAMPAIGN
+
+Connect missions into a progressive learning campaign.
+
+Allow players to unlock advanced challenges by demonstrating understanding and completing engineering requirements.
+
+Do not reward players only for clicking through tutorials.
+
+==================================================
+PART 8 — ADDITIONAL NASA DATA AND RESOURCE PORTALS
+==================================================
+
+Use the following portals as supporting resources for the game.
+
+NASA Open Data:
+https://data.nasa.gov/
+
+NASA API Portal:
+https://api.nasa.gov/
+
+NASA Earthdata:
+https://earthdata.nasa.gov/
+
+NASA/JPL:
+https://www.jpl.nasa.gov/
+
+NASA Space Apps:
+https://www.spaceappschallenge.org/
+
+Implementation rules:
+
+- Verify every API endpoint.
+- Use official documentation.
+- Respect API limits.
+- Handle DEMO_KEY limitations.
+- Support legitimate API keys through secure backend configuration.
+- Do not expose private credentials in frontend code.
+- Earthdata authentication may be required for particular datasets.
+- Do not assume every resource is available through a public REST API.
+
+Preserve the existing NASA/JPL Horizons integration.
+
+Existing endpoint:
+
+GET /api/nasa/horizons
+
+==================================================
+PART 9 — INTEGRATED MISSION ENGINEERING WORKFLOW
+==================================================
+
+The six resources must work together.
+
+Implement the following end-to-end workflow:
+
+STEP 1 — MISSION CONCEPT
+
+Use NASA science mission development principles.
+
+Player defines:
+
+- Mission purpose.
+- Science objectives.
+- Destination.
+- Mission type.
+- Success criteria.
+
+STEP 2 — CONCEPT MATURITY
+
+Use JPL CML-inspired assessment.
+
+Evaluate:
+
+- Science feasibility.
+- Technical feasibility.
+- Management feasibility.
+- Cost uncertainty.
+- Mission architecture.
+
+STEP 3 — MISSION ARCHITECTURE
+
+Use NASA lifecycle and MDL-style concept development.
+
+Configure:
+
+- Space segment.
+- Ground segment.
+- Launch segment.
+- User segment.
+- Mission operations.
+
+STEP 4 — SPACECRAFT DESIGN
+
+Configure:
+
+- Bus.
+- Payload.
+- Propulsion.
+- Power.
+- Thermal.
+- Communication.
+- Attitude control.
+- Structure.
+- Navigation.
+
+STEP 5 — ORBITAL ANALYSIS
+
+Use GMAT-inspired capabilities.
+
+Calculate:
+
+- Orbit.
+- Transfer.
+- Delta-V.
+- Propellant.
+- Mission duration.
+- Trajectory.
+
+STEP 6 — ENGINEERING TRADE STUDY
+
+Use MDL-inspired engineering trade studies.
+
+Compare alternatives using measurable constraints.
+
+STEP 7 — REQUIREMENTS VERIFICATION
+
+Use NASA systems engineering practices.
+
+Verify:
+
+- Mass.
+- Power.
+- Thermal.
+- Communication.
+- Propulsion.
+- Payload.
+- Mission objectives.
+
+STEP 8 — MATURITY REVIEW
+
+Use the CML assessment system.
+
+Require evidence before advancing.
+
+STEP 9 — MISSION EXECUTION
+
+Use Mission-Viz-inspired visualization.
+
+Show the spacecraft moving through the simulated mission.
+
+STEP 10 — MISSION RESULTS
+
+Evaluate:
+
+- Mission success.
+- Science objectives.
+- Engineering performance.
+- Resource consumption.
+- Risks.
+- Requirements compliance.
+- Learning outcomes.
+
+STEP 11 — DEBRIEFING
+
+Generate a technical mission report.
+
+Include design decisions, calculations, failures, assumptions and lessons learned.
+
+==================================================
+PART 10 — UNIFIED ENGINEERING DATA MODEL
+==================================================
+
+Create a unified mission engineering data architecture.
+
+Adapt it to the existing store and backend.
+
+Suggested conceptual entities:
+
+Mission:
+- id
+- name
+- missionType
+- destination
+- objectives
+- successCriteria
+- lifecyclePhase
+- maturityLevel
+- status
+
+Requirement:
+- id
+- missionId
+- parentRequirementId
+- description
+- priority
+- acceptanceCriteria
+- verificationMethod
+- verificationStatus
+- evidence
+
+Spacecraft:
+- id
+- missionId
+- dryMass
+- propellantMass
+- wetMass
+- powerGeneration
+- powerConsumption
+- payload
+- subsystems
+
+Trajectory:
+- id
+- missionId
+- initialState
+- targetOrbit
+- maneuvers
+- deltaV
+- propagationModel
+- assumptions
+
+TradeStudy:
+- id
+- missionId
+- problem
+- alternatives
+- criteria
+- results
+- selectedAlternative
+
+Risk:
+- id
+- missionId
+- description
+- probability
+- consequence
+- mitigation
+- owner
+- status
+
+MaturityAssessment:
+- id
+- missionId
+- currentLevel
+- assessmentCategory
+- evidence
+- reviewer
+- decision
+- gaps
+
+MissionReview:
+- id
+- missionId
+- reviewType
+- findings
+- actionItems
+- approvalStatus
+
+All entities must be linked to the existing mission state.
+
+Avoid duplicating existing database structures.
+
+==================================================
+PART 11 — MISSION ANALYSIS AND ENGINEERING CALCULATIONS
+==================================================
+
+Integrate actual engineering calculations.
+
+A. MASS BUDGET
+
+Calculate:
+
+- Dry mass.
+- Propellant mass.
+- Payload mass.
+- Subsystem mass.
+- Structural mass.
+- Wet mass.
+- Mass margin.
+
+B. POWER BUDGET
+
+Calculate:
+
+- Power generation.
+- Power consumption.
+- Peak demand.
+- Average demand.
+- Power margin.
+- Battery requirements where supported.
+
+C. DELTA-V BUDGET
+
+Track:
+
+- Injection.
+- Transfer.
+- Mid-course correction.
+- Orbit insertion.
+- Station keeping.
+- Descent or landing where applicable.
+
+D. PROPULSION
+
+Where supported, implement the Tsiolkovsky rocket equation:
+
+Delta-V = Isp × g0 × ln(m0/mf)
+
+Display units and assumptions.
+
+E. ORBITAL CALCULATIONS
+
+Implement appropriate equations for:
+
+- Circular velocity.
+- Escape velocity.
+- Orbital period.
+- Elliptical orbit parameters.
+- Ideal Hohmann transfers.
+
+Use validated constants and clearly stated assumptions.
+
+F. COST AND SCHEDULE
+
+Provide educational estimates with transparent assumptions.
+
+Do not present arbitrary game credits as actual NASA mission costs.
+
+Distinguish:
+
+- Estimated cost.
+- Configured game budget.
+- Reference cost.
+- Unknown cost.
+
+==================================================
+PART 12 — RISK AND TRADE STUDY SYSTEM
+==================================================
+
+Create a consistent engineering risk system.
+
+Use:
+
+Risk Score = Probability × Consequence
+
+Allow configurable scales and explain the scoring method.
+
+Support:
+
+- Technical risks.
+- Schedule risks.
+- Cost risks.
+- Launch risks.
+- Operational risks.
+- Science risks.
+- Reliability risks.
+
+Each risk must have:
+
+- Description.
+- Cause.
+- Consequence.
+- Probability.
+- Severity.
+- Mitigation.
+- Responsible owner.
+- Status.
+- Review history.
+
+Trade studies must compare alternatives using weighted criteria where appropriate.
+
+Allow players to change criteria weights and observe how the recommended alternative changes.
+
+Never hide engineering trade-offs behind an unexplained single score.
+
+==================================================
+PART 13 — GAME UI INTEGRATION
+==================================================
+
+Integrate the new capabilities into existing screens.
+
+DASHBOARD:
+
+Add:
+
+- Mission lifecycle progress.
+- Current CML.
+- Engineering review status.
+- Requirements completion.
+- Critical risks.
+- Mass and power margins.
+- Mission readiness.
+
+MISSION DESIGN:
+
+Add:
+
+- Science objectives.
+- Mission architecture.
+- Equipment list.
+- Subsystem trade-offs.
+- Spacecraft budgets.
+- Configuration validation.
+
+ORBITAL PLANNER:
+
+Add:
+
+- GMAT-inspired mission analysis.
+- Mission sequence editor.
+- Orbit propagation.
+- Maneuver planning.
+- Trajectory optimization.
+- Assumptions and data sources.
+
+SYSTEMS ENGINEERING:
+
+Add:
+
+- Requirements traceability.
+- Verification matrix.
+- CML assessment.
+- Review gates.
+- Risk register.
+- Trade studies.
+- Corrective actions.
+
+MISSION CONTROL:
+
+Add:
+
+- Mission sequence status.
+- Actual simulation state.
+- Maneuver events.
+- Mission phase progression.
+- Communication status.
+
+CAMPAIGN:
+
+Add:
+
+- Educational mission challenges.
+- Progressive difficulty.
+- Engineering milestones.
+- Learning objectives.
+
+MISSION RESULTS:
+
+Add:
+
+- Mission performance.
+- Scientific objectives.
+- Engineering compliance.
+- Resource efficiency.
+- Maturity assessment.
+- Lessons learned.
+
+SQUAD MULTIPLAYER:
+
+Where compatible with the existing system, allow team members to work in different engineering roles.
+
+Roles:
+
+- Mission Director.
+- Flight Dynamics Engineer.
+- Systems Engineer.
+- Payload Specialist.
+- Science Officer.
+- Mission Operations Engineer.
+
+Support existing leader permissions and synchronization.
+
+Do not replace existing Socket.IO architecture.
+
+==================================================
+PART 14 — AI COMMANDER INTEGRATION
+==================================================
+
+Connect existing AI Commander functionality to the new engineering framework.
+
+The AI Commander should:
+
+- Explain mission concepts.
+- Explain engineering calculations.
+- Identify incomplete requirements.
+- Identify potential design conflicts.
+- Summarize trade studies.
+- Explain mission risks.
+- Recommend next engineering actions.
+- Explain CML assessment gaps.
+- Generate mission debriefing summaries.
+
+IMPORTANT:
+
+AI suggestions must not automatically approve requirements or review gates.
+
+AI must not silently modify mission configurations.
+
+All consequential mission changes require player confirmation.
+
+AI-generated engineering recommendations must identify their assumptions and distinguish suggestions from validated results.
+
+==================================================
+PART 15 — PERSISTENCE AND CAMPAIGN PROGRESSION
+==================================================
+
+Preserve the existing persistence architecture.
+
+Save:
+
+- Mission configurations.
+- Engineering requirements.
+- Trade studies.
+- Risk assessments.
+- Maturity reviews.
+- Orbital configurations.
+- Mission sequence.
+- Campaign progression.
+- Learning achievements.
+
+Ensure saved missions can be reopened without losing engineering information.
+
+Where multiplayer is supported, synchronize authorized changes.
+
+Avoid creating a second independent mission database.
+
+==================================================
+PART 16 — TESTING AND SCIENTIFIC VALIDATION
+==================================================
+
+Run tests for every integrated subsystem.
+
+NASA SCIENCE MISSION WORKFLOW:
+
+- Mission objectives.
+- Requirements.
+- Traceability.
+- Lifecycle transitions.
+- Review gates.
+- Verification.
+
+GMAT-INSPIRED SYSTEM:
+
+- Orbital calculations.
+- Propagation.
+- Maneuvers.
+- Delta-V.
+- Propellant estimation.
+- Trajectory visualization.
+- Numerical stability.
+
+JPL CML:
+
+- Maturity criteria.
+- Evidence requirements.
+- Blocked transitions.
+- Review approvals.
+- Assessment history.
+
+NASA MDL:
+
+- Mission concept development.
+- Trade studies.
+- Point design.
+- Equipment list.
+- Engineering budgets.
+
+MISSION-VIZ:
+
+- Planetary positions.
+- Earth-Moon visualization.
+- Elliptical orbits.
+- Trajectory overlays.
+- Time-based rendering.
+
+CSA EDUCATIONAL GAMEPLAY:
+
+- Challenge progression.
+- Learning objectives.
+- Feedback.
+- Difficulty.
+- Mission scoring.
+
+Also verify:
+
+- TypeScript.
+- Production build.
+- Existing tests.
+- API compatibility.
+- State persistence.
+- Multiplayer synchronization.
+- 3D performance.
+- Responsive UI.
+
+Use reference calculations and documented test cases.
+
+Do not delete tests to make the build pass.
+
+==================================================
+PART 17 — IMPLEMENTATION ORDER
+==================================================
+
+Follow this order to avoid damaging existing functionality.
+
+PHASE A — SOURCE AUDIT
+
+Inspect existing code and map all relevant systems.
+
+Produce a dependency and integration plan.
+
+PHASE B — ENGINEERING FOUNDATION
+
+Implement or extend:
+
+- Mission data model.
+- Requirements model.
+- Engineering units.
+- Calculation utilities.
+- Provenance and assumptions.
+- Validation services.
+
+PHASE C — NASA SCIENCE MISSION FRAMEWORK
+
+Integrate mission objectives, lifecycle and requirements engineering.
+
+PHASE D — GMAT-INSPIRED ORBITAL ENGINE
+
+Extend existing orbital calculations and trajectory systems.
+
+PHASE E — JPL CML FRAMEWORK
+
+Implement maturity assessments, evidence and gates.
+
+PHASE F — NASA MDL WORKSPACE
+
+Implement concept development, trade studies and point-design workflows.
+
+PHASE G — MISSION-VIZ INTEGRATION
+
+Improve existing visualization and connect it to mission data.
+
+PHASE H — CSA EDUCATIONAL GAMEPLAY
+
+Connect learning objectives, challenges and feedback.
+
+PHASE I — UNIFIED UI INTEGRATION
+
+Connect all systems to existing screens.
+
+PHASE J — AI AND MULTIPLAYER INTEGRATION
+
+Connect authorized workflows to existing AI and Socket.IO services.
+
+PHASE K — VERIFICATION
+
+Run calculations, tests, builds and actual application inspection.
+
+Do not skip a phase silently.
+
+If implementation scope exceeds the current execution session, complete a coherent working increment, document the remaining work and preserve the project state.
+
+==================================================
+PART 18 — FINAL ACCEPTANCE CRITERIA
+==================================================
+
+The implementation is not complete merely because new pages or buttons exist.
+
+The following must work:
+
+1. Player can create a science mission.
+2. Player can define scientific objectives.
+3. Player can create and trace requirements.
+4. Player can configure mission architecture.
+5. Player can design a spacecraft.
+6. Player can configure orbital parameters.
+7. Player can execute a mission analysis.
+8. Player can calculate mission Delta-V.
+9. Player can compare engineering alternatives.
+10. Player can evaluate mission risks.
+11. Player can complete maturity assessments.
+12. Player can pass or fail review gates based on evidence.
+13. Player can build a point design.
+14. Player can visualize mission trajectories.
+15. Player can progress through mission lifecycle phases.
+16. Player can execute educational mission challenges.
+17. Player can save and reopen engineering work.
+18. Player can generate a mission debriefing report.
+
+Only mark an item complete after actual implementation and verification.
+
+==================================================
+PART 19 — FINAL IMPLEMENTATION REPORT
+==================================================
+
+Provide a detailed report containing:
+
+1. Existing architecture inspected.
+2. NASA resources integrated.
+3. Mission lifecycle implementation.
+4. Requirements engineering implementation.
+5. GMAT-inspired features implemented.
+6. JPL CML implementation.
+7. NASA MDL workflows implemented.
+8. Mission-Viz features implemented.
+9. CSA educational gameplay implemented.
+10. Engineering calculations verified.
+11. Existing APIs preserved.
+12. Existing components modified.
+13. New components created.
+14. Database and persistence changes.
+15. AI Commander integration.
+16. Multiplayer integration.
+17. TypeScript result.
+18. Production build result.
+19. Test result.
+20. Runtime verification.
+21. Known limitations.
+22. Remaining work.
+23. Recommended next phase.
+
+Use three status categories:
+
+- COMPLETED AND VERIFIED.
+- PARTIALLY IMPLEMENTED.
+- NOT IMPLEMENTED.
+
+Never claim an untested feature is working.
+
+==================================================
+FINAL DIRECTIVE
+==================================================
+
+Transform the existing ORBITAL COMMAND application into an integrated space mission engineering, design and simulation platform.
+
+Use the actual engineering concepts from:
+
+1. NASA Design and Develop Science Missions.
+2. NASA GMAT R2026a.
+3. JPL Concept Maturity Levels.
+4. NASA Goddard Mission Design Lab.
+5. NASA Mission-Viz.
+6. Canadian Space Agency Digital Games and Activities.
+
+These resources must influence actual game mechanics, calculations, mission progression, engineering assessments, visualizations and educational experiences.
+
+Preserve the existing project.
+
+Preserve existing working functionality.
+
+Do not rebuild the application.
+
+Do not replace real engineering with decorative UI.
+
+Inspect first.
+
+Implement carefully.
+
+Validate scientifically.
+
+Test honestly.
+
+Report actual results.
+
+THE FINAL GOAL:
+
+A player should be able to think, plan, design, analyze, review, simulate and evaluate a complete space mission using the same broad engineering disciplines and decision-making principles used in professional space mission development.

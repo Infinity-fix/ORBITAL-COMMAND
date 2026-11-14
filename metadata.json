@@ -1,0 +1,6 @@
+{
+  "name": "Orbital Command: Space Mission Design Studio",
+  "description": "An interactive 3D educational space mission design, orbital mechanics, systems engineering, and multiplayer mission control simulation game.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

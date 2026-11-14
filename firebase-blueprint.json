@@ -1,0 +1,125 @@
+{
+  "entities": {
+    "user": {
+      "title": "UserProfile",
+      "description": "User profile with authentication and cloud sync metadata",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique user ID" },
+        "displayName": { "type": "string", "description": "Display name of the commander" },
+        "email": { "type": "string", "description": "User email address" },
+        "photoURL": { "type": "string", "description": "Profile avatar URL" },
+        "createdAt": { "type": "string", "description": "ISO timestamp of account creation" },
+        "updatedAt": { "type": "string", "description": "ISO timestamp of last profile update" },
+        "isAnonymous": { "type": "boolean", "description": "Whether guest/anonymous session" }
+      },
+      "required": ["id", "createdAt", "updatedAt"]
+    },
+    "campaign": {
+      "title": "CampaignRecord",
+      "description": "Campaign save state and completed orbital flight records",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Campaign record ID" },
+        "userId": { "type": "string", "description": "Owning user UID" },
+        "missionName": { "type": "string", "description": "Name of the campaign mission" },
+        "destinationId": { "type": "string", "description": "Destination celestial body ID" },
+        "missionType": { "type": "string", "description": "Flyby, Orbiter, Lander, or Sample Return" },
+        "score": { "type": "number", "description": "Total engineering & operational score out of 100" },
+        "grade": { "type": "string", "description": "Letter grade (S, A, B, C, D, F)" },
+        "passed": { "type": "boolean", "description": "Whether the mission met all primary criteria" },
+        "costMUsd": { "type": "number", "description": "Total mission cost in millions USD" },
+        "durationDays": { "type": "number", "description": "Planned flight duration in Earth days" },
+        "completedAt": { "type": "string", "description": "ISO timestamp of mission completion" }
+      },
+      "required": ["id", "userId", "missionName", "destinationId", "score", "grade", "passed", "completedAt"]
+    },
+    "mission": {
+      "title": "FieldMissionRecord",
+      "description": "Field operation telemetry and 3D objective completion stats",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Mission run record ID" },
+        "userId": { "type": "string", "description": "Owning user UID" },
+        "missionId": { "type": "string", "description": "Playable mission ID identifier" },
+        "title": { "type": "string", "description": "Playable mission title" },
+        "score": { "type": "number", "description": "Achieved field score" },
+        "passed": { "type": "boolean", "description": "Whether all mission objectives were completed" },
+        "scienceCount": { "type": "number", "description": "Count of collected science discoveries" },
+        "completedAt": { "type": "string", "description": "ISO timestamp of field operation completion" }
+      },
+      "required": ["id", "userId", "missionId", "title", "score", "passed", "completedAt"]
+    },
+    "spacecraft": {
+      "title": "SpacecraftConfiguration",
+      "description": "Custom spacecraft architecture, propulsion, bus specs, and payloads",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Spacecraft design blueprint ID" },
+        "userId": { "type": "string", "description": "Owning user UID" },
+        "name": { "type": "string", "description": "Design blueprint name" },
+        "busType": { "type": "string", "description": "Spacecraft bus chassis type" },
+        "propulsionType": { "type": "string", "description": "Primary propulsion engine architecture" },
+        "powerSourceType": { "type": "string", "description": "Primary power source configuration" },
+        "wetMassKg": { "type": "number", "description": "Calculated wet mass in kilograms" },
+        "dryMassKg": { "type": "number", "description": "Calculated dry mass in kilograms" },
+        "deltaVMs": { "type": "number", "description": "Total available delta-v in m/s" },
+        "createdAt": { "type": "string", "description": "ISO timestamp of creation" }
+      },
+      "required": ["id", "userId", "name", "busType", "propulsionType", "powerSourceType"]
+    },
+    "achievement": {
+      "title": "AchievementEntry",
+      "description": "Unlocked player achievement badge or career milestone",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Achievement record ID" },
+        "userId": { "type": "string", "description": "Owning user UID" },
+        "achievementId": { "type": "string", "description": "Achievement identifier code" },
+        "unlockedAt": { "type": "string", "description": "ISO timestamp of unlock" },
+        "category": { "type": "string", "description": "Achievement classification" }
+      },
+      "required": ["id", "userId", "achievementId", "unlockedAt"]
+    },
+    "settings": {
+      "title": "UserSettings",
+      "description": "Player preferences, control mappings, audio levels, and graphics",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Settings document ID ('preferences')" },
+        "userId": { "type": "string", "description": "Owning user UID" },
+        "units": { "type": "string", "description": "Measurement unit system" },
+        "graphicsQuality": { "type": "string", "description": "Graphics quality preset" },
+        "soundEnabled": { "type": "boolean", "description": "Audio master toggle" },
+        "updatedAt": { "type": "string", "description": "ISO timestamp of last update" }
+      },
+      "required": ["id", "userId", "units", "graphicsQuality", "soundEnabled"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "user" },
+      "description": "User profile document isolated per authenticated UID"
+    },
+    "/users/{userId}/campaigns/{campaignId}": {
+      "schema": { "$ref": "campaign" },
+      "description": "Campaign records and orbital mission save states for user"
+    },
+    "/users/{userId}/missions/{missionId}": {
+      "schema": { "$ref": "mission" },
+      "description": "3D Field operation records and flight telemetry logs for user"
+    },
+    "/users/{userId}/spacecraft/{spacecraftId}": {
+      "schema": { "$ref": "spacecraft" },
+      "description": "Custom spacecraft designs and hardware engineering configurations"
+    },
+    "/users/{userId}/achievements/{achId}": {
+      "schema": { "$ref": "achievement" },
+      "description": "Unlocked achievements and career badges for user"
+    },
+    "/users/{userId}/settings/{settingsId}": {
+      "schema": { "$ref": "settings" },
+      "description": "Personal gameplay preferences, audio, and graphics settings"
+    }
+  }
+}

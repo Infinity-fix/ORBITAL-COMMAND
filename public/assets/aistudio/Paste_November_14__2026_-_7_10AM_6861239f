@@ -1,0 +1,1155 @@
+# ORBITAL COMMAND — PHASE 2.2
+# NASA SCIENTIFIC DATASETS INTEGRATION & MISSION INTELLIGENCE SYSTEM
+
+Continue development of the EXISTING ORBITAL COMMAND project.
+
+Implement a comprehensive NASA Scientific Dataset Integration System using the nine previously identified Mars datasets/instruments and the existing NASA/JPL Horizons integration.
+
+This is an integration task, NOT an application rebuild.
+
+==================================================
+1. CRITICAL PROJECT PRESERVATION RULES
+==================================================
+
+Before making changes:
+
+1. Inspect the complete existing source code.
+2. Inspect the current application architecture.
+3. Identify existing NASA API integrations.
+4. Identify existing planetary data modules.
+5. Identify mission planning and simulation systems.
+6. Identify existing database and persistence architecture.
+7. Identify existing UI components and data flow.
+
+STRICT REQUIREMENTS:
+
+- Do not recreate the application.
+- Do not restart previous development phases.
+- Do not overwrite completed GUI redesigns.
+- Do not replace existing NASA integrations.
+- Do not remove existing calculations.
+- Do not change existing API contracts unnecessarily.
+- Do not break existing 3D systems.
+- Do not introduce fake NASA data.
+- Do not display simulated information as real measurements.
+- Do not hardcode fabricated scientific observations.
+
+Create an isolated NASA Data Integration module and connect it to existing systems using minimal compatible changes.
+
+==================================================
+2. DATASET 001 — MOLA
+==================================================
+
+FULL NAME:
+Mars Orbiter Laser Altimeter.
+
+SOURCE MISSION:
+NASA Mars Global Surveyor.
+
+DATA CATEGORY:
+Planetary Topography and Elevation Mapping.
+
+SCIENTIFIC PURPOSE:
+
+MOLA measures the elevation and topography of the Martian surface using laser altimetry.
+
+It provides information about:
+
+- Surface elevation.
+- Planetary topography.
+- Mountain heights.
+- Crater depths.
+- Valley structures.
+- Regional slopes.
+- Large-scale terrain formations.
+- Surface elevation differences.
+
+DATA CHARACTERISTICS:
+
+- Global Mars elevation coverage.
+- Multiple spatial resolutions.
+- Historical gridded elevation products.
+- Approximately 4–128 pixels per degree across different products.
+- Elevation measurements referenced to a planetary datum.
+
+GAME INTEGRATION:
+
+A. Planetary Map:
+Use MOLA elevation products to construct a global Mars elevation layer.
+
+B. Landing Site Selection:
+Use elevation data to identify high and low elevation regions.
+
+C. Mission Planning:
+Allow mission designers to compare candidate landing locations.
+
+D. Terrain Analysis:
+Use elevation differences to derive regional slope and terrain profiles where data resolution supports it.
+
+E. Rover Exploration:
+Use available elevation information for large-scale route planning.
+
+F. Mission Risk:
+Flag steep or unsuitable terrain based on derived elevation gradients.
+
+VISUALIZATION:
+
+- Elevation heatmap.
+- 3D topographic surface.
+- Contour lines.
+- Terrain profile.
+- Elevation legend.
+
+IMPORTANT:
+Do not claim MOLA resolves small rocks or individual surface hazards. Its global elevation products are not a substitute for high-resolution local terrain models.
+
+==================================================
+3. DATASET 002 — CTX
+==================================================
+
+FULL NAME:
+Context Camera.
+
+SOURCE MISSION:
+NASA Mars Reconnaissance Orbiter.
+
+DATA CATEGORY:
+Regional Surface Imaging and Geological Context.
+
+SCIENTIFIC PURPOSE:
+
+CTX captures wide-area grayscale images of the Martian surface.
+
+It provides regional context for:
+
+- Craters.
+- Geological formations.
+- Valleys.
+- Large rocks and surface structures.
+- Dust-covered terrain.
+- Landing site surroundings.
+- Surface boundaries.
+
+DATA CHARACTERISTICS:
+
+- Approximately 6 meters per pixel for commonly used products.
+- Broad regional coverage.
+- Approximately 99.1% coverage in the previously identified mapping reference.
+- Grayscale image products.
+
+GAME INTEGRATION:
+
+A. Mars Surface Map:
+Integrate CTX imagery as a regional basemap.
+
+B. Mission Design:
+Allow scientists to inspect candidate exploration regions.
+
+C. Landing Site Analysis:
+Display nearby craters, geological structures and regional terrain.
+
+D. Rover Route Planning:
+Use CTX for regional route context, not as the sole source of fine-scale obstacle avoidance.
+
+E. Scientific Objectives:
+Allow missions to target geological formations visible in CTX imagery.
+
+VISUALIZATION:
+
+- Grayscale Mars imagery.
+- Regional map overlays.
+- Landing location markers.
+- Geological region boundaries.
+- Image zoom and pan.
+
+==================================================
+4. DATASET 003 — HiRISE
+==================================================
+
+FULL NAME:
+High Resolution Imaging Science Experiment.
+
+SOURCE MISSION:
+NASA Mars Reconnaissance Orbiter.
+
+DATA CATEGORY:
+High-Resolution Surface Imaging and Terrain Hazard Analysis.
+
+SCIENTIFIC PURPOSE:
+
+HiRISE provides extremely detailed orbital images of Mars.
+
+It supports the study of:
+
+- Small impact craters.
+- Boulders.
+- Rock formations.
+- Sand dunes.
+- Surface textures.
+- Landing site hazards.
+- Geological structures.
+- Small-scale terrain features.
+
+DATA CHARACTERISTICS:
+
+- Approximately 25–50 cm per pixel for commonly used image products, depending on acquisition conditions and processing.
+- High-resolution targeted imaging.
+- Stereo image acquisitions available for selected locations.
+- Digital Terrain Models available for selected stereo coverage.
+
+GAME INTEGRATION:
+
+A. Landing Hazard Detection:
+Identify visible rocks, craters and potentially hazardous terrain features.
+
+B. Landing Site Assessment:
+Provide high-resolution inspection of candidate landing regions.
+
+C. Rover Navigation:
+Support detailed terrain analysis when suitable imagery or elevation products are available.
+
+D. Mission Risk:
+Flag potentially hazardous terrain.
+
+E. Exploration Gameplay:
+Allow players to discover geological formations through detailed imagery.
+
+VISUALIZATION:
+
+- High-resolution surface imagery.
+- Terrain hazard overlays.
+- Stereo-derived 3D terrain where available.
+- Local elevation models.
+- Landing site inspection mode.
+
+IMPORTANT:
+Do not claim that every HiRISE image has a corresponding Digital Terrain Model. Use actual available stereo products.
+
+Do not use image resolution alone to claim that a rock has been automatically detected. Distinguish image interpretation from verified hazard detection.
+
+==================================================
+5. DATASET 004 — THEMIS
+==================================================
+
+FULL NAME:
+Thermal Emission Imaging System.
+
+SOURCE MISSION:
+NASA Mars Odyssey.
+
+DATA CATEGORY:
+Thermal Imaging and Surface Composition.
+
+SCIENTIFIC PURPOSE:
+
+THEMIS collects thermal infrared and visible imagery of Mars.
+
+Thermal infrared data helps investigate:
+
+- Surface temperature patterns.
+- Thermal inertia.
+- Rock abundance indicators.
+- Dust coverage.
+- Surface material differences.
+- Geological boundaries.
+
+Visible imagery provides additional geological context.
+
+DATA CHARACTERISTICS:
+
+THERMAL INFRARED:
+Approximately 100 meters per pixel for commonly used mapping products.
+
+VISIBLE IMAGING:
+Approximately 18–19 meters per pixel for commonly used products.
+
+DATA TYPES:
+
+- Thermal infrared images.
+- Visible images.
+- Temperature-related products.
+- Thermal inertia products.
+- Geological mapping products.
+
+GAME INTEGRATION:
+
+A. Environmental Analysis:
+Display thermal characteristics of different Martian regions.
+
+B. Landing Site Selection:
+Compare regional thermal conditions.
+
+C. Mission Risk:
+Identify regions with potentially challenging thermal characteristics.
+
+D. Surface Science:
+Help players select geological investigation targets.
+
+E. Mission Planning:
+Support thermal environment assessments.
+
+VISUALIZATION:
+
+- Thermal map.
+- Temperature color layers.
+- Visible imagery.
+- Thermal inertia overlays.
+- Regional geological comparisons.
+
+IMPORTANT:
+Distinguish measured brightness temperature, calibrated temperature products and derived thermal inertia.
+
+Do not present orbital thermal observations as current local weather.
+
+==================================================
+6. DATASET 005 — CRISM
+==================================================
+
+FULL NAME:
+Compact Reconnaissance Imaging Spectrometer for Mars.
+
+SOURCE MISSION:
+NASA Mars Reconnaissance Orbiter.
+
+DATA CATEGORY:
+Mineralogy and Spectral Geology.
+
+SCIENTIFIC PURPOSE:
+
+CRISM studies the mineral composition of the Martian surface using reflected sunlight and spectral observations.
+
+It helps identify evidence of minerals associated with past water-related processes.
+
+Potential mineralogical targets include:
+
+- Phyllosilicates.
+- Hydrated sulfates.
+- Carbonates.
+- Iron-bearing minerals.
+- Other spectrally identifiable surface materials.
+
+DATA CHARACTERISTICS:
+
+TARGETED OBSERVATIONS:
+Approximately 18–36 meters per pixel for commonly used targeted products.
+
+SURVEY OBSERVATIONS:
+Approximately 90–180 meters per pixel for commonly used products.
+
+DATA TYPES:
+
+- Spectral cubes.
+- Mineral identification products.
+- Spectral parameter maps.
+- Targeted observations.
+- Regional mineralogical survey products.
+
+GAME INTEGRATION:
+
+A. Science Mission Design:
+Allow players to select mineralogical investigation objectives.
+
+B. Landing Site Selection:
+Identify regions with known mineralogical observations.
+
+C. Rover Exploration:
+Use orbital mineralogical evidence to identify scientifically interesting destinations.
+
+D. Mission Objectives:
+Create mineral collection or mineral investigation objectives.
+
+E. Scientific Results:
+Generate mission science reports based on actual available observations and clearly labelled derived interpretations.
+
+VISUALIZATION:
+
+- Mineral distribution map.
+- Spectral data visualization.
+- Mineral detection overlays.
+- Geological investigation markers.
+- Science target selection.
+
+IMPORTANT:
+Do not treat mineral detections as proof of biological activity or definitive evidence of life.
+
+Do not claim that every location has CRISM coverage.
+
+==================================================
+7. DATASET 006 — REMS
+==================================================
+
+FULL NAME:
+Rover Environmental Monitoring Station.
+
+SOURCE MISSION:
+NASA Mars Science Laboratory — Curiosity Rover.
+
+LOCATION:
+Gale Crater, Mars.
+
+DATA CATEGORY:
+Surface Meteorology and Atmospheric Environment.
+
+SCIENTIFIC PURPOSE:
+
+REMS measures environmental conditions at the Curiosity rover location.
+
+Available measurements include:
+
+- Air temperature.
+- Ground temperature.
+- Atmospheric pressure.
+- Wind-related measurements.
+- Relative humidity.
+- Ultraviolet radiation measurements.
+
+DATA CHARACTERISTICS:
+
+- In-situ rover observations.
+- Time-associated measurements.
+- Sol-based Martian observation records.
+- Archived atmospheric and environmental datasets.
+
+GAME INTEGRATION:
+
+A. Environmental Simulation:
+Provide historical real-world environmental observations.
+
+B. Mission Risk:
+Use available historical measurements to study environmental challenges.
+
+C. Mission Planning:
+Help players evaluate the atmospheric conditions observed at Gale Crater.
+
+D. Scientific Objectives:
+Allow players to investigate Martian weather and atmospheric variability.
+
+E. Mission Reports:
+Display actual environmental observation records.
+
+VISUALIZATION:
+
+- Temperature charts.
+- Atmospheric pressure charts.
+- Wind measurement displays.
+- Environmental history.
+- Sol-based timelines.
+
+CRITICAL SCIENTIFIC RESTRICTION:
+
+REMS belongs to Curiosity at Gale Crater.
+
+Never label REMS observations as Perseverance or Jezero Crater measurements.
+
+Do not use REMS measurements as current weather conditions at other Mars locations.
+
+==================================================
+8. DATASET 007 — MEDA
+==================================================
+
+FULL NAME:
+Mars Environmental Dynamics Analyzer.
+
+SOURCE MISSION:
+NASA Mars 2020 — Perseverance Rover.
+
+LOCATION:
+Jezero Crater, Mars.
+
+DATA CATEGORY:
+Meteorology, Atmospheric Dynamics and Dust Environment.
+
+SCIENTIFIC PURPOSE:
+
+MEDA measures Martian environmental conditions near the Perseverance rover.
+
+Available measurement categories include:
+
+- Air temperature.
+- Ground temperature.
+- Atmospheric pressure.
+- Wind speed and direction.
+- Relative humidity.
+- Dust-related atmospheric observations.
+- Radiation-related environmental observations.
+- Sky and atmospheric measurements from relevant sensors.
+
+DATA CHARACTERISTICS:
+
+- In-situ surface measurements.
+- Calibrated environmental datasets.
+- Time-associated observations.
+- Sol-based measurement records.
+- Archived data products, including CSV-indexed records where available.
+
+GAME INTEGRATION:
+
+A. Mars Environmental Intelligence:
+Display real Perseverance environmental measurements.
+
+B. Mission Planning:
+Use historical measurements to understand Jezero's observed environmental conditions.
+
+C. Weather Risk:
+Use relevant environmental measurements for scientifically grounded scenario analysis.
+
+D. Dust Storm Simulation:
+Use actual dust observations where available and distinguish them from generated scenarios.
+
+E. Mission Results:
+Include environmental data in post-mission scientific reports.
+
+VISUALIZATION:
+
+- Atmospheric dashboard.
+- Wind indicators.
+- Temperature charts.
+- Dust monitoring.
+- Sol-based history.
+- Environmental condition timeline.
+
+CRITICAL SCIENTIFIC RESTRICTION:
+
+MEDA is associated with Perseverance at Jezero Crater.
+
+Use the exact label:
+
+"MEASURED — MEDA / PERSEVERANCE / JEZERO CRATER"
+
+Do not present historical measurements as live current conditions.
+
+Clearly label modelled environmental conditions separately from measured observations.
+
+==================================================
+9. DATASET 008 — RAD
+==================================================
+
+FULL NAME:
+Radiation Assessment Detector.
+
+SOURCE MISSION:
+NASA Mars Science Laboratory — Curiosity Rover.
+
+LOCATION:
+Gale Crater, Mars.
+
+DATA CATEGORY:
+Radiation Environment and Space Radiation Science.
+
+SCIENTIFIC PURPOSE:
+
+RAD measures the radiation environment encountered at the Martian surface.
+
+It supports investigation of:
+
+- Galactic cosmic radiation.
+- Solar energetic particle events.
+- Charged particle radiation.
+- Radiation dose.
+- Radiation environment variations.
+
+DATA CHARACTERISTICS:
+
+- In-situ radiation measurements.
+- Time-associated observation records.
+- Sol-based datasets.
+- Calibrated archived data products, including ASCII-based products.
+
+GAME INTEGRATION:
+
+A. Astronaut Safety:
+Provide scientific context for radiation exposure.
+
+B. Habitat Design:
+Help players understand radiation shielding requirements.
+
+C. Mission Risk:
+Include radiation exposure in human mission risk assessments.
+
+D. Space Suit Design:
+Allow comparisons of radiation protection concepts.
+
+E. Mission Simulation:
+Use historical measurements to construct clearly labelled educational radiation scenarios.
+
+VISUALIZATION:
+
+- Radiation measurement charts.
+- Exposure timeline.
+- Radiation environment dashboard.
+- Shielding comparison.
+- Historical event analysis.
+
+CRITICAL SCIENTIFIC RESTRICTION:
+
+RAD belongs to Curiosity at Gale Crater.
+
+Do not label RAD observations as direct Perseverance or Jezero Crater measurements.
+
+For Jezero missions, use suitable MEDA-related observations where applicable and independently sourced or modelled radiation estimates with explicit provenance.
+
+Never present an estimate as a direct measurement.
+
+==================================================
+10. DATASET 009 — MARIE
+==================================================
+
+FULL NAME:
+Mars Radiation Environment Experiment.
+
+SOURCE MISSION:
+NASA Mars Odyssey.
+
+DATA CATEGORY:
+Space Radiation and Planetary Radiation Environment.
+
+SCIENTIFIC PURPOSE:
+
+MARIE investigated the radiation environment associated with Mars during the Mars Odyssey mission.
+
+It contributed to understanding radiation exposure relevant to Mars exploration and human spaceflight.
+
+Its historical scientific context includes:
+
+- Radiation measurements during interplanetary cruise.
+- Mars orbital radiation environment observations.
+- Particle radiation measurements.
+- Radiation exposure research.
+- Human exploration radiation studies.
+
+DATA CHARACTERISTICS:
+
+- Historical spacecraft measurements.
+- Mars Odyssey mission-associated records.
+- Archived scientific products.
+- Radiation-related observations from the mission period.
+
+GAME INTEGRATION:
+
+A. Human Mission Planning:
+Provide historical radiation research for Mars mission design.
+
+B. Spacecraft Design:
+Support radiation shielding educational comparisons.
+
+C. Astronaut Safety:
+Provide historical scientific context for radiation risks.
+
+D. Mission Risk:
+Use appropriate archived measurements when relevant to the mission environment.
+
+E. Science Reports:
+Display MARIE's contribution to planetary radiation research.
+
+VISUALIZATION:
+
+- Historical radiation charts.
+- Mars orbital radiation research.
+- Mission-associated observation timelines.
+- Radiation shielding education.
+
+IMPORTANT:
+
+MARIE is a historical research instrument.
+
+Do not represent MARIE data as current live radiation measurements.
+
+Do not confuse Mars orbital observations with direct surface measurements.
+
+==================================================
+11. EXISTING DATASET 010 — NASA/JPL HORIZONS
+==================================================
+
+FULL NAME:
+NASA/JPL Horizons Solar System Dynamics System.
+
+EXISTING INTEGRATION:
+Preserve the existing project API:
+
+GET /api/nasa/horizons
+
+OFFICIAL SOURCE:
+https://ssd.jpl.nasa.gov/horizons/
+
+EXISTING TARGET IDENTIFIERS:
+
+- Mercury: 199
+- Venus: 299
+- Earth: 399
+- Moon: 301
+- Mars: 499
+- Jupiter: 599
+- Saturn: 699
+
+EXISTING DATA CONFIGURATION:
+
+- Vector data.
+- KM-S units.
+- CSV output.
+- Existing target-based query functionality.
+
+SCIENTIFIC PURPOSE:
+
+Horizons provides planetary and small-body ephemerides and related solar system dynamical information.
+
+GAME INTEGRATION:
+
+A. Orbital Planner:
+Use available position and velocity vectors.
+
+B. Mission Design:
+Support planetary mission planning.
+
+C. Trajectory Simulation:
+Connect validated ephemeris data to the existing trajectory system.
+
+D. Launch Window Analysis:
+Use suitable time-dependent ephemeris data.
+
+E. Planetary Visualization:
+Display actual celestial positions at the requested epoch.
+
+F. Mission Control:
+Display mission-related celestial information.
+
+CRITICAL REQUIREMENT:
+
+The existing Horizons integration is not sufficient by itself to claim that complete spacecraft trajectory simulation is connected.
+
+Inspect the current implementation and complete the missing data flow without replacing existing orbital mechanics calculations.
+
+Clearly identify which calculations use actual Horizons data and which are derived simulations.
+
+==================================================
+12. DATASET INTEGRATION ARCHITECTURE
+==================================================
+
+Create an organized integration architecture.
+
+Suggested module structure:
+
+src/
+  services/
+    nasa/
+      nasaClient.ts
+      nasaDataRegistry.ts
+      nasaDataTypes.ts
+      nasaDataValidation.ts
+      nasaProvenance.ts
+
+      datasets/
+        mola.ts
+        ctx.ts
+        hirise.ts
+        themis.ts
+        crism.ts
+        rems.ts
+        meda.ts
+        rad.ts
+        marie.ts
+        horizons.ts
+
+      processing/
+        terrainProcessor.ts
+        thermalProcessor.ts
+        mineralProcessor.ts
+        weatherProcessor.ts
+        radiationProcessor.ts
+
+      cache/
+        nasaCache.ts
+
+Adapt this structure to the existing project architecture rather than blindly creating duplicate files.
+
+Create a centralized dataset registry containing:
+
+- Dataset ID.
+- Dataset name.
+- Instrument.
+- Source mission.
+- Target celestial body.
+- Geographic coverage.
+- Temporal coverage.
+- Measurement category.
+- Spatial resolution.
+- Data product type.
+- Source institution.
+- Official source URL.
+- Access method.
+- Last updated information, when available.
+- Validation status.
+- Availability status.
+
+==================================================
+13. OFFICIAL NASA DATA SOURCES
+==================================================
+
+Verify official data access through appropriate NASA and mission repositories.
+
+Investigate:
+
+1. NASA Planetary Data System:
+https://pds.nasa.gov/
+
+2. PDS Geosciences Node:
+https://pds-geosciences.wustl.edu/
+
+3. PDS Imaging Node:
+https://pds-imaging.jpl.nasa.gov/
+
+4. THEMIS official project resources:
+https://themis.asu.edu/
+
+5. NASA/JPL Mars Reconnaissance Orbiter:
+https://mars.nasa.gov/mro/
+
+6. NASA Mars Odyssey:
+https://mars.nasa.gov/odyssey/
+
+7. NASA Mars Exploration Program:
+https://science.nasa.gov/mars/
+
+8. NASA/JPL Horizons:
+https://ssd.jpl.nasa.gov/horizons/
+
+Use appropriate official archives and actual dataset documentation.
+
+Do not assume every dataset has a convenient REST API.
+
+Some datasets may require:
+
+- Archive downloads.
+- Image files.
+- Scientific raster processing.
+- CSV parsing.
+- ASCII parsing.
+- PDS product interpretation.
+- Metadata interpretation.
+- Specialized scientific formats.
+
+Verify the actual access method before implementation.
+
+Never invent API endpoints.
+
+==================================================
+14. CONNECT DATASETS TO GAME SYSTEMS
+==================================================
+
+Integrate NASA data into the existing game modules.
+
+MISSION DESIGN:
+
+- Planetary environment selection.
+- Science objectives.
+- Landing site selection.
+- Scientific payload selection.
+- Mission feasibility.
+- Environmental constraints.
+
+SPACECRAFT DESIGN:
+
+- Radiation shielding research.
+- Thermal environment assessment.
+- Scientific instrument selection.
+- Environmental protection considerations.
+
+ORBITAL PLANNER:
+
+- Existing Horizons integration.
+- Planetary ephemeris.
+- Celestial position visualization.
+- Mission timing support.
+
+SYSTEMS ENGINEERING:
+
+- Environmental requirements.
+- Scientific requirements.
+- Mission constraints.
+- Risk identification.
+- Verification evidence.
+- Trade studies.
+
+MISSION CONTROL:
+
+- Mission status.
+- Environmental information.
+- Scientific observations.
+- Mission data monitoring.
+
+PLANETARY GAMEPLAY:
+
+- Mars terrain layers.
+- Elevation maps.
+- Geological information.
+- Environmental research.
+- Exploration targets.
+- Radiation research.
+- Scientific discoveries.
+
+CAMPAIGN:
+
+- Dataset-driven science objectives.
+- Mission milestones.
+- Scientific achievements.
+- Exploration progression.
+
+MISSION RESULTS:
+
+- Scientific observations.
+- Data collected.
+- Environmental findings.
+- Dataset provenance.
+- Mission success evaluation.
+
+==================================================
+15. SCIENTIFIC DATA CLASSIFICATION
+==================================================
+
+Every displayed data point must belong to one of these categories:
+
+A. MEASURED
+
+Directly obtained from a scientific instrument or validated archived observation.
+
+B. DERIVED
+
+Calculated from measured or archived data using a documented processing method.
+
+C. MODELLED
+
+Produced by a scientific model or estimation process.
+
+D. SIMULATED
+
+Generated by the game's educational mission simulation.
+
+E. UNAVAILABLE
+
+Required data is not available or could not be retrieved.
+
+Display the classification clearly in the interface.
+
+Each scientific observation should retain:
+
+- Dataset ID.
+- Instrument.
+- Source mission.
+- Observation location.
+- Observation time.
+- Units.
+- Original product identifier, when available.
+- Processing method.
+- Data classification.
+- Source citation.
+
+Never mix these categories without clear labels.
+
+==================================================
+16. NASA DATA VISUALIZATION CENTER
+==================================================
+
+Create a dedicated NASA Scientific Data Center inside the existing application.
+
+Design it consistently with the approved ORBITAL COMMAND GUI.
+
+Required features:
+
+- Dataset catalog.
+- Dataset search.
+- Category filters.
+- Mission filters.
+- Planet filters.
+- Dataset details.
+- Data source information.
+- Availability status.
+- Download or retrieval status.
+- Data preview.
+- Scientific visualization.
+- Provenance information.
+
+Categories:
+
+1. Terrain and Topography.
+2. Surface Imaging.
+3. Thermal Science.
+4. Mineralogy and Geology.
+5. Atmospheric Science.
+6. Weather and Dust.
+7. Radiation Science.
+8. Orbital Mechanics.
+
+For each dataset, show:
+
+- What it measures.
+- Which mission carried the instrument.
+- Where the measurements were collected.
+- Spatial and temporal coverage.
+- Available product types.
+- How the game uses the data.
+- Scientific limitations.
+
+Do not make the interface look like a static information page.
+
+Connect it to actual dataset registry and retrieval status.
+
+==================================================
+17. DATA VALIDATION AND PERFORMANCE
+==================================================
+
+Implement:
+
+- Metadata validation.
+- File format validation.
+- Unit validation.
+- Coordinate system validation.
+- Time reference validation.
+- Missing data handling.
+- Invalid observation handling.
+- Data provenance.
+- Cache management.
+- Retry handling.
+- Download progress.
+- Error reporting.
+
+For large scientific image datasets:
+
+- Avoid loading full-resolution products unnecessarily.
+- Use suitable image pyramids or tiled rendering where supported.
+- Load selected regions when possible.
+- Keep the 3D rendering loop independent of large data downloads.
+- Cache reusable scientific products.
+
+Do not expose private API keys or credentials in frontend code.
+
+Do not download every NASA archive automatically.
+
+Use appropriate user-selected or mission-required data products.
+
+==================================================
+18. DATASET AVAILABILITY AND HONESTY
+==================================================
+
+Before marking a dataset as integrated:
+
+1. Verify the official source.
+2. Verify actual product availability.
+3. Verify the access method.
+4. Retrieve a real sample where practical.
+5. Parse the actual data.
+6. Validate its metadata and units.
+7. Connect it to the appropriate game module.
+8. Test its visualization.
+9. Verify the scientific classification.
+10. Record the source and limitations.
+
+Use these integration statuses:
+
+- NOT STARTED
+- SOURCE VERIFIED
+- DATA ACCESS VERIFIED
+- SAMPLE RETRIEVED
+- DATA PARSING COMPLETED
+- GAME INTEGRATION COMPLETED
+- VALIDATION PASSED
+
+Do not mark a dataset fully integrated merely because its name appears in the interface.
+
+==================================================
+19. TESTING
+==================================================
+
+Verify each dataset independently.
+
+MOLA:
+Elevation loading, map rendering and terrain calculations.
+
+CTX:
+Image retrieval, regional rendering and map overlays.
+
+HiRISE:
+High-resolution imagery and available stereo-derived terrain.
+
+THEMIS:
+Thermal products and visualization.
+
+CRISM:
+Spectral product retrieval and mineralogical interpretation.
+
+REMS:
+Curiosity/Gale environmental observations.
+
+MEDA:
+Perseverance/Jezero environmental observations.
+
+RAD:
+Curiosity/Gale radiation observations.
+
+MARIE:
+Historical Mars Odyssey radiation research.
+
+HORIZONS:
+Existing API, celestial vectors and orbital data flow.
+
+Also test:
+
+- API error handling.
+- Invalid files.
+- Missing datasets.
+- Cache behavior.
+- Large data products.
+- Responsive UI.
+- TypeScript.
+- Production build.
+- Existing tests.
+- Existing gameplay.
+- Existing 3D rendering.
+
+Do not delete existing tests.
+
+==================================================
+20. FINAL REPORT
+==================================================
+
+After implementation, provide:
+
+1. NASA datasets identified.
+2. Official sources verified.
+3. Datasets successfully retrieved.
+4. Datasets successfully parsed.
+5. Datasets connected to game modules.
+6. Dataset visualizations completed.
+7. Existing Horizons integration status.
+8. APIs created or modified.
+9. Components created or modified.
+10. Scientific validation results.
+11. TypeScript validation.
+12. Production build result.
+13. Existing test results.
+14. Performance observations.
+15. Remaining incomplete integrations.
+16. Known scientific limitations.
+17. Recommended next development phase.
+
+Provide a dataset-by-dataset integration status table.
+
+Do not claim successful integration without actual verification.
+
+==================================================
+FINAL DIRECTIVE
+==================================================
+
+Transform ORBITAL COMMAND into a scientifically grounded space mission design and planetary exploration simulation.
+
+Use the nine previously identified Mars scientific datasets and the existing NASA/JPL Horizons integration.
+
+Preserve existing code, architecture, gameplay, GUI, APIs and completed features.
+
+NASA datasets must contribute actual scientific information to mission design, environmental analysis, planetary exploration, spacecraft engineering and mission results.
+
+Do not create decorative NASA branding in place of real scientific integration.
+
+Do not fabricate measurements.
+
+Do not rebuild the application.
+
+Inspect first. Integrate carefully. Validate scientifically. Test completely. Report honestly.
